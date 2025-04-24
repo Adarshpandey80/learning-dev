@@ -1,8 +1,27 @@
 
 .h1 {
     text-decoration: line-through;
-    font-size: 50px;
+    font-size: 40px;
     font-style: italic;
     color: yellow;
     text-shadow: 10px -40px 3px blue;
+    text-align: center;
+}
+
+.h3{
+    font-family: Verdana;
+}
+
+.container{
+    background-color: brown;
+    color: white;
+    padding: 20px;
+}
+.container1{
+    background-color: blue;
+    padding: 20px;
+    margin-top: 20px;
+    border: 12px solid black;
+    box-shadow: 10pt 40pt red;
+    
 }
