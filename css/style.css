@@ -54,7 +54,7 @@
 } */
 
 
-body{
+/* body{
    margin: 0;
     padding: 0;
 }
@@ -79,4 +79,19 @@ body{
     color: white;
     padding: 5px;
     border-radius: 6px;
+} */
+
+
+/* html{
+    scroll-behavior: smooth;
+}
+
+.head{
+    background-color: rgb(152, 97, 26);
+    color: white;
+    padding: 20px;
+} */
+
+.icon{
+    font-size: 500px;
 }
