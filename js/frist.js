@@ -119,14 +119,63 @@
  //wap to take one input from user and check it is even of odd if num is even then print the tabel of that num
  //if num is odd then print cube of that num
 
- let num =  parseInt(prompt("enter the num"))
+//  let num =  parseInt(prompt("enter the num"))
  
- if(num%2==0){
-  for(let i=1; i<=10;i++){
-    document.write(num*i + "<br>")
-  } 
- }else {
-    let cube = num*num*num;
-    document.write(cube)
+//  if(num%2==0){
+//   for(let i=1; i<=10;i++){
+//     document.write(num*i + "<br>")
+//   } 
+//  }else {
+//     let cube = num*num*num;
+//     document.write(cube);
+    
+//     }
+
+    // nested foe loop
+
+
+// for(let i=1;i<=10;i++){
+//   for(let a=2; a<=3;a++)
+//   {
+//     document.write(i*a + " ");
+//   }
+// }
+
+// for(let i=0 ; i<=5 ;i++){
+//   for(let j= 0 ;j<=i ;j++){
+//     document.write("*")
+//   }
+//   document.write("<br>")
+// }
+
+// for(let i=0 ; i<=5 ;i++){
+//   for(let j= 0 ;j<=5-i-1 ;j++){
+//     document.write("*")
+//   }
+//   document.write("<br>")
+// }
+
+// for(let i=0 ; i<=5 ;i++){
+//   for(let j= 5-i ;j>5 ;j++){
+//     document.write(" ")
+//   }for(let j= 0 ;j<=i ;j++){
+//     document.write("*")
+//   }
+//   document.write("<br>")
+// }
+
+
+// for(let i=0 ;i<=5;i++){
+//   for(let j=0;j<=5;j++){
+//     if(i==0||j==0||i==5||j==5){
+//       document.write("*")
+//     }
+//     else{
+//       document.write("&nbsp&nbsp")
+//       }
    
-    }
+//   }
+
+//    document.write("<br>")
+// }
+console.log()
