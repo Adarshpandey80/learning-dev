@@ -181,3 +181,43 @@
 // }
 
 
+//                      Array
+
+
+// let ar = ["adarsh", 52,"bpl"]
+// for(let ver of ar){
+//     console.log(ver)
+// }
+
+
+// let ar = []
+
+// for(let i =0 ;i<5;i++){
+//     ar[i] = parseInt(prompt("enter the data for arr" ))
+    
+// }
+
+
+// wap to find frist digit and last digit of num 
+
+//  let num = parseInt(prompt("inter the num"))
+// let num1 = num
+// while( num>=10){
+//     num = num/10
+// }
+//     console.log(num)
+
+// let rem = num1%10
+// console.log(rem)  
+
+// console.log(num+rem)
+
+// let ar = []
+// for(let i =0 ; i<5;i++){
+//     ar[i] = parseInt(prompt("enter the data for arr"))
+// }
+// let sum =0;
+// for(let i =0 ; i<5;i++){
+//     sum = sum + ar[i]
+// }
+// console.log(sum)
