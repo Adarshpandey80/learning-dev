@@ -181,7 +181,7 @@
 // }
 
 
-//                      Array
+//                      Array..........................................
 
 
 // let ar = ["adarsh", 52,"bpl"]
@@ -209,7 +209,6 @@
 
 // let rem = num1%10
 // console.log(rem)  
-
 // console.log(num+rem)
 
 // let ar = []
@@ -221,3 +220,33 @@
 //     sum = sum + ar[i]
 // }
 // console.log(sum)
+
+
+
+
+//  push() && pop()  && 
+//  unshift() "add element on 1st indexing" && shift() "delete element from frist indexing"  function ..................
+// slice() "take out some elements from array "
+//splice() 
+let stu = ["adarsh" ,20 , "bhopal" ,3,4,5,6,7]
+// console.log(stu)
+// stu.push("cyberom" , "india")
+// console.log(stu)
+// stu.pop()
+// console.log(stu)
+
+// stu.unshift("country" , "name" , 200)
+// console.log(stu)
+
+// stu.shift()
+// console.log(stu) 
+
+let a = stu.slice(1,4)
+console.log(a)
+
+stu.splice(1,4)
+console.log(stu)
+
+stu.splice(1,0,"pandey")
+console.log(stu)
+
