@@ -228,7 +228,7 @@
 //  unshift() "add element on 1st indexing" && shift() "delete element from frist indexing"  function ..................
 // slice() "take out some elements from array "
 //splice() 
-let stu = ["adarsh" ,20 , "bhopal" ,3,4,5,6,7]
+// let stu = ["adarsh" ,20 , "bhopal" ,3,4,5,6,7]
 // console.log(stu)
 // stu.push("cyberom" , "india")
 // console.log(stu)
@@ -241,12 +241,56 @@ let stu = ["adarsh" ,20 , "bhopal" ,3,4,5,6,7]
 // stu.shift()
 // console.log(stu) 
 
-let a = stu.slice(1,4)
-console.log(a)
+// let a = stu.slice(1,4)
+// console.log(a)
 
-stu.splice(1,4)
-console.log(stu)
+// stu.splice(1,4)
+// console.log(stu)
 
-stu.splice(1,0,"pandey")
-console.log(stu)
+// stu.splice(1,0,"pandey")
+// console.log(stu)
+
+
+// 20/05/25........................ object ................/ 
+
+
+// let ob = {
+//     name:"adarsh",
+//     age:20,
+//     contact:234,
+// }
+
+// console.log(ob.name)
+
+
+
+// let person = {
+//     name:prompt("enter the name of person"),
+//     age:prompt("enter the age of person"),
+//     contact:prompt("enter the contect of person")
+// }
+
+// console.log(person)
+
+// let a = prompt("enter the name of person")
+// let b = parseInt(prompt("enter the age of person"))
+// person.name = a    // the methos is use to override the value
+// person.age = b
+// console.log(person.name)
+// console.log(person.age)
+
+// nested object
+
+// let obj = {
+//     name : "adarsh",
+//     age : 20,
+//     contect : 23445,
+//     account : {
+//         acc_name : "bob",
+//         acc_no: 1234
+//     }
+// }
+
+// console.log(obj.name)
+// console.log(obj.account.acc_name)
 
