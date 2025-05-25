@@ -294,3 +294,67 @@
 // console.log(obj.name)
 // console.log(obj.account.acc_name)
 
+// let ob = {
+//     name:"adarsh",
+//     lastN:"pandey",
+//     age:20,
+//     contect:1234,
+//     location:"bhopal",
+//     city:"inderpuri",
+//     country:"india",
+// }
+// console.log(Object.keys(ob)[0])
+
+//========================= function ==========================
+
+// ================no argument with no return==============
+// function even(){   
+//     let n = parseInt(prompt("enter the num"));
+//     let square =  n*n;
+//     console.log(square)
+//     if(n%2==0){
+//         console.log("num is even")
+//     }else{
+//         console.log("num is odd")
+//     }
+// }
+// even();
+
+// ================argument with  return==============
+
+// function arrSum(arr){
+   
+//     let sum =0;
+//   for(let i =0 ;i<=4; i++){
+//     sum = sum+ arr[i];
+//   }
+//    return sum;
+// }
+// let arr1 = [2,3,4,5,5]
+// console.log(arrSum(arr1))
+
+// ================no argument with  return==============
+
+// function lastD (){
+//     let n = parseInt(prompt("enter the num"))
+//     while(n>=10){
+//         n = n/10
+//     }
+//     return n;
+// }
+// console.log(lastD())
+
+
+function divi( n){
+   if(n%3==0){
+    console.log("number is divisibel by 3")
+    for(let i =1;i<=10;i++){
+   console.log(n*i)
+      
+    }
+   }else {
+    console.log("num is not divisibel by three")
+   }
+   return n
+}
+console.log(divi(6))
