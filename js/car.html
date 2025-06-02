@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+
+    .carcontainer  { 
+      display: grid;
+    
+      padding: 20px;
+      gap: 15px;
+      align-items: center;
+      flex-wrap: wrap;
+      position: absolute;
+    }
+
+    .bike{
+        height: 70px;
+        margin-top: 50px;
+        margin-left: 30px;
+       border-radius: 10px;
+    }
+    .bike:hover {
+        scale: 1.1;  
+    }
+    #bikebig {
+      margin-left:  100px;
+        }
+    
+
+     
+</style>
+</head>
+<body>
+    
+        <div class="carcontainer">
+    
+        <img src="/bikesimages/bike1.webp" class="bike"  onmouseenter="funcar1()" alt="">
+        <img src="/bikesimages/bike2.webp" class="bike"  onmouseenter="funcar2()" alt="">
+        <img src="/bikesimages/bike3.webp" class="bike"   onmouseenter="funcar3()" alt="">
+        <img src="/bikesimages/bike4.webp" class="bike"  onmouseenter="funcar4()"  alt="">
+        <img src="/bikesimages/bike5.webp" class="bike"  onmouseenter="funcar5()"  alt="">
+        
+        </div> 
+
+   
+         <img  src="/bikesimages/bike1.webp" id="bikebig"  alt="">
+    
+      
+         
+       
+    
+       
+    <script>
+        function funcar1(){
+            let car = document.getElementById('bikebig');
+            car.src = "/bikesimages/bike1.webp";
+        }
+        function funcar2(){
+            let car = document.getElementById('bikebig');
+            car.src = "/bikesimages/bike2.webp";
+        }   
+        function funcar3(){
+            let car = document.getElementById('bikebig');
+            car.src = "/bikesimages/bike3.webp";
+        }
+        function funcar4(){
+            let car = document.getElementById('bikebig');
+            car.src = "/bikesimages/bike4.webp";
+        }
+        function funcar5(){
+            let car = document.getElementById('bikebig');
+            car.src = "/bikesimages/bike5.webp";
+        }
+    </script>
+    
+     
+
+    
+</body>
+</html>

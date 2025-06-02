@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <style>
+        .container {
+            height: 200px;
+            width: 250px;
+            background-color: aliceblue;
+           margin: 100px auto;;
+        }
+        #h1 {
+            text-align: center;
+            color: blue;
+        }
+        #count {
+            text-align: center;
+            color: red;
+            font-size: 50px;
+        }
+        button {
+            margin-left: 10px;
+        }
+    </style>
+
+
+    <div class="container">
+       <h1 id="h1">Counter</h1>
+        <h1 id="count">0</h1>
+    <button onclick="decrement()">Decrement</button>
+    <button onclick="increment()">Increment</button>
+    <button onclick="rset()"> reset</button>
+    
+    </div>
+    <!-- <h1 id="hover"  onmouseenter="hover()" onmouseleave="reset()">Hover on me</h1> -->
+  
+    <script >
+        let v=0;
+function increment(){
+    v++
+    document.getElementById('count').innerHTML =v;
+}
+function decrement(){
+     
+    if(v>0){
+       v--  
+  
+         document.getElementById('count').innerHTML =v;  
+    }
+
+
+}
+
+    function rset(){
+        v=0;
+        document.getElementById('count').innerHTML = v;
+    }
+
+    // function hover(){
+    //    let text = document.getElementById('hover')
+    //    text.innerHTML = "Get out";
+    //    text.style.color = "blue"
+    // }
+
+    // function reset(){
+    //    let leave = document.getElementById('hover')
+    //    leave.innerHTML = "Hover on me";
+    //    leave.style.color = "black"
+      
+    // }
+
+
+
+
+
+
+
+    </script> 
+</body>
+</html>
