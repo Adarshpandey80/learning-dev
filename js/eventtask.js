@@ -10,3 +10,5 @@ function fun1(a){
     let b = document.body
     b.style.backgroundColor = a;
 }
+
+

@@ -345,16 +345,20 @@
 // console.log(lastD())
 
 
-function divi( n){
-   if(n%3==0){
-    console.log("number is divisibel by 3")
-    for(let i =1;i<=10;i++){
-   console.log(n*i)
+// function divi( n){
+//    if(n%3==0){
+//     console.log("number is divisibel by 3")
+//     for(let i =1;i<=10;i++){
+//    console.log(n*i)
       
-    }
-   }else {
-    console.log("num is not divisibel by three")
-   }
-   return n
-}
-console.log(divi(6))
+//     }
+//    }else {
+//     console.log("num is not divisibel by three")
+//    }
+//    return n
+// }
+// console.log(divi(6))
+
+
+let a = parseInt(prompt("enter a number"))
+document.write(a);
