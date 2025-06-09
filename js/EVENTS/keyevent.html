@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 tabindex="0">Lorem ipsum dolor sit amet.</h1>
+    <input type="text" onkeyup="alert('this is onkeyup')">
+    <input type="text" onkeydown="alert('this is onkeydown')">
+    <input type="text" onkeypress="alert('this is onkeypress')">
+    <button onclick="func()">Cliclme</button>
+
+<!-- // wap to take two input from html and find the sum -->
+ <br>
+ <!-- num1: <input type="text" id="num1"> 
+ num2: <input type="text" id="num2">
+  <button id="add" onclick="add()">Add</button> <br>
+   Answer:<h1 id="result"></h1> -->
+ Prinum1: <input type="text" id="num1"> 
+ Prinum2: <input type="text" id="num2">
+  <button id="add" onclick="prime()">Get prime</button> <br>
+   Answer:<h1 id="result"></h1>
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+
+        
+        // const func=()=>{
+        //     alert("this is arrow function")
+        // }
+ 
+        //  const add = ()=>{
+        //     let x = parseInt( document.getElementById("num1").value);
+        //     let y = parseInt( document.getElementById("num2").value);
+        //     let c = x+y;
+        
+        //     document.getElementById("result").innerHTML =c;
+        //  }
+
+
+        const prime = ()=>{
+            let x = parseInt(document.getElementById("num1").value)
+            let y = parseInt(document.getElementById("num2").value)
+
+            for(let i =x; i<=y ; i++){
+                let count =0;
+                for(let j =1 ;j<=i;j++){
+                    
+                    if(i%j==0){
+                        console.log(i)
+                    }
+            
+                }
+                //    if(count>2){
+                //       console.log("prime num " + i)
+                //      }
+            }
+            
+        }
+   
+    </script>
+</body>
+</html>

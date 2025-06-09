@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+      <h1>This is add Event listener</h1>
+      <button id="bnt">Click me</button>
+      <input type="text" id="inpt">
+      <div id="box" style="background-color: red; height: 50px; width: 50px;">mybox</div>
+    <script>
+
+        x =[2,3,4,5,6,7,8,9];
+        x.forEach((e,i) => {
+            console.log(e,i);
+        });
+        y = document.getElementById("btn")
+        // y,addEventListener("click" , ()=>{
+        //     alert("hello")
+        // })
+       z = document.getElementById("inpt")
+       box = document.getElementById("box")
+       box.style.position = "relative";
+       pos = 10;
+       z.addEventListener("keyup" , (e)=>{
+        if(e.code ==="KeyA"){
+            // alert("press A")
+            box.style.left = pos+'px';
+            pos+=10;
+        }
+        console.log(e.code)
+       })
+    </script>
+</body>
+</html>
