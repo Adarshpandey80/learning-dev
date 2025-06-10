@@ -25,10 +25,22 @@
        box.style.position = "relative";
        pos = 10;
        z.addEventListener("keyup" , (e)=>{
-        if(e.code ==="KeyA"){
+        if(e.code ==="ArrowRight"){
             // alert("press A")
             box.style.left = pos+'px';
             pos+=10;
+        } else if (e.code === 'ArrowDown'){
+            box.style.bottom = pos+'px';
+            pos-=10;
+        } else if (e.code === 'ArrowLeft'){
+            box.style.right = pos+'px';
+            pos+=10;
+        }
+         else if (e.code === 'ArrowUp'){
+            box.style.top = pos+'px';
+            pos-=10;
+        } else {
+          alert("press arrow button")
         }
         console.log(e.code)
        })

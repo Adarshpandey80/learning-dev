@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>This is map function and template literal</h1>
+
+<div id="box">
+
+</div>
+    <script>
+        // let arr = [1,2,3,4,5,6,7,8,9]
+        // const arr1 =  arr.map((e), ()=>{
+        //     console.log(e)
+        // })
+      
+    //     let div = document.querySelector("#box")
+    //     let data = "welcome to bhopal";
+    //     let myimg = `/bikesimages/bike1.webp`
+    //     div.innerHTML = `<h1>hello js </h1>
+    //     <h2>this is h2 heading </h2>
+    //     <h3>${data}</h3>
+    //     <img src="${myimg}" height="100px" weight="100px" onclick = "fun()" id="img" alt="myimg" />
+    //     ` 
+
+    //    function fun(){
+    //         document.getElementById("img").style.height = "200px";
+    //     }
+
+      
+
+    const img = ['/bikesimages/bike1.webp','/bikesimages/bike2.webp','/bikesimages/bike3.webp']
+   const box = document.querySelector("#box")
+   const myimg = img.map((e) => {
+   return `
+    <img src="${e}" alt="img" />
+    `
+   })
+   box.innerHTML = myimg;
+
+    </script>
+</body>
+</html>
