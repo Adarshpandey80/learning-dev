@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <button onclick="input_array()" >C.Array</button>
+    <button onclick="read_array()">R.Array</button>
+    <button onclick="update_array()">U.Array</button>
+    <button onclick="delete_array()">D.Array</button>
+    <br><br>
+    <div id="div">
+        Input Array: <input type="text" id="input"><br><br>
+       <button onclick="Add_element()">Add Elements</button>
+        <button onclick="close_input()" id="btn">Close</button>
+    </div>
+    <div id="see_array_div">
+        Array Elements: <h2 id="all_array_element"></h2>
+         <button onclick="close_input()" id="btn">Close</button>
+    </div>
+
+    <div id="update">
+        Find Element : <input type="text" id="find_array_element">
+        Updated Element : <input type="text" id="update_array_element">
+        Updated Array : <h2 id="Updated_array"></h2>
+         <button onclick="close_input()" id="btn">Close</button>
+         <button onclick="new_update_array()">Updated Array</button>
+    </div>
+
+
+    <div id="delete">
+        Delete Element : <input type="text" id="delete_element"><br><br>
+        New Array : <h2 id="new_array"></h2>
+        <button id="element_delete" onclick="delete_element()">Delete</button>
+         <button onclick="close_input()" >Close</button>
+    </div>
+
+     <script>
+        let div = document.getElementById("div")
+        div.style.display = "none"
+        document.getElementById("see_array_div").style.display ="none"
+        document.getElementById("update").style.display ="none"
+        document.getElementById("delete").style.display ="none"
+        let arr = [];
+       const close_input=()=>{
+        document.getElementById("div").style.display = "none"
+        document.getElementById("see_array_div").style.display ="none"
+        document.getElementById("update").style.display ="none"
+        document.getElementById("delete").style.display ="none"
+       }
+        const input_array =()=>{
+        document.getElementById("div").style.display = "block"
+
+        }
+      
+        const Add_element=()=>{
+         let array_input = document.getElementById("input").value
+         document.getElementById("input").value
+         let newArr = arr.push(array_input)
+         console.log(arr)
+         document.getElementById("input").value = " "
+        }
+
+
+        const read_array = ()=>{
+             document.getElementById("see_array_div").style.display ="block"
+            let see_array = document.getElementById("all_array_element")
+            see_array.innerHTML = arr;
+           console.log(see_array)
+        }
+    
+        const update_array =()=>{
+             document.getElementById("update").style.display ="block"
+        }
+        
+        const new_update_array = ()=>{
+            let element_update = document.getElementById("find_array_element").value
+            let new_element = document.getElementById("update_array_element").value
+           let ind = arr.findIndex(e=>e===element_update)
+           arr[ind] = new_element
+           console.log(arr)
+           document.getElementById("Updated_array").innerHTML = arr;
+        }
+
+      const delete_array =()=>{
+        document.getElementById("delete").style.display= "block"
+      }
+
+      const delete_element = ()=>{
+       let deleteElement= document.getElementById("delete_element").value
+       let Delete_index =  arr.findIndex(e=>e===deleteElement)
+       arr.splice(Delete_index , 1)
+       new_array.innerHTML = arr;
+
+      }
+     </script>
+
+
+</body>
+</html>

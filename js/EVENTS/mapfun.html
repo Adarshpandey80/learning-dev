@@ -11,6 +11,11 @@
 <div id="box">
 
 </div>
+
+ Email:<input type="text" id="email">
+ Password: <input type="text" id="pass">
+ <button onclick="login()">login</button>
+
     <script>
         // let arr = [1,2,3,4,5,6,7,8,9]
         // const arr1 =  arr.map((e), ()=>{
@@ -32,14 +37,50 @@
 
       
 
-    const img = ['/bikesimages/bike1.webp','/bikesimages/bike2.webp','/bikesimages/bike3.webp']
-   const box = document.querySelector("#box")
-   const myimg = img.map((e) => {
-   return `
-    <img src="${e}" alt="img" />
-    `
-   })
-   box.innerHTML = myimg;
+//    const img = ['/bikesimages/bike1.webp','/bikesimages/bike2.webp','/bikesimages/bike3.webp']
+//    const box = document.querySelector("#box")
+//    const myimg = img.map((e) => {
+//    return `
+//     <img src="${e}" alt="img"height="200px" />
+//     `
+//    })
+//    box.innerHTML = myimg;
+
+// wap to add all the Array element using map function
+
+// let arr = [1,2,3,4,5]
+// let add=0;
+// arr.map((e) =>{
+//     add = add+e;
+
+// })
+// console.log(add)
+
+let email =["email" ,"email2" ,"email3"]
+let pass = ["hello1" ,"hello2","hello3"]
+
+const login =()=>{
+    let user_email = document.getElementById("email").value
+    let found = false;
+    //  email.map((e)=>{
+    //     if(e===user_email){
+    //         alert("login succsefull")
+    //         found = true
+    //     } if(!found) {
+    //         alert(" not found")
+    //     }
+    // })
+    let user_password = document.getElementById("pass").value
+    console.log(user_email)
+ let ind = (email.findIndex(e=>e===user_email))
+ console.log(pass[ind])
+ if((user_email ===email[ind]) && user_password ===pass[ind]){
+    alert("login siccesfull")
+ }else {
+    alert("login failed")
+ }
+    
+}
 
     </script>
 </body>
