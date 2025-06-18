@@ -1,153 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    
-    <style>
-        body {
-            background-color: #f0f0f0;
-            font-family: Arial, sans-serif;
-        }
-        h2 {
-            color: #333;
-        }
-        form {
-            margin: 20px;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-        input[type="text"] {
-            width: calc(100% - 22px);
-            padding: 10px;
-            margin-bottom: 10px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-        button {
-            padding: 10px 15px;
-            background-color: #28a745;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #218838;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    body {
+      background-color: #f0f0f0;
+      font-family: Arial, sans-serif;
+    }
+
+    h2 {
+      color: #333;
+    }
+
+    form {
+      margin: 20px;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    input[type="text"] {
+      width: calc(100% - 22px);
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    button {
+      padding: 10px 15px;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #218838;
+    }
+  </style>
 </head>
+
 <body>
-     <!-- <h2>This is find method  Or Objects</h2> -->
-   <h2>Form for login </h2>
-   <form action="">
+  <!-- <h2>This is find method  Or Objects</h2> -->
+  <!-- <h2>Form for login </h2>
+  <form action="">
     Usernamre: <input type="text" placeholder="enter your name" id="userInfo">
-      Password : <input type="text" placeholder="enter your password" id="userPass">
-      <div id="login">
-        <button id="loginbutton" onclick="login()">Login</button>
-      </div>
-   </form>
-      
-      
-
-
-     <script>
-        // let arr = [];
-        // let input = document.getElementById("input")
-        // let x =  document.getElementById("div")
-        // let y = arr.find((e)=>e==="ram")
-        // x.innerHTML =y;
+    Password : <input type="text" placeholder="enter your password" id="userPass">
+    <div id="login">
+      <button id="loginbutton" onclick="login()">Login</button>
+    </div>
+  </form> -->
 
 
 
 
-        // let myobj = {
-
-        //     name:"adarsh",
-        //     lastN:"pandey",
-        //     pass :"123",
-        //     email: "pandey@gmail.com"
-        // }
-        // console.log(myobj.name)
-        // console.log(myobj["name"])
-        // myobj.name = "aman";
-        // console.log(myobj)
-        // Object.freeze(myobj)
+  <script>
+    // let arr = [];
+    // let input = document.getElementById("input")
+    // let x =  document.getElementById("div")
+    // let y = arr.find((e)=>e==="ram")
+    // x.innerHTML =y;
 
 
-      //  let obj1 = {
-      //     key1: "value1",
-      //       key2: "value2",
-      //       key3: "value3"
-      //  }
-
-      //    let obj2 = {
-      //           key4: "value4",
-      //           key5: "value5",
-      //           key6: "value6"
-      //    }
-
-      //    let obj3 = {...obj1,...obj2}
-      //    console.log(obj3)
-      //    let obj4 = Object.assign({},obj1,obj2)
-      //    console.log(obj4)
 
 
-      let Constumer = [
-        {
-          Username:"aman",
-          password: "1111",
-        },
-        {
-          Username:"Mohan",
-          password: "2222",
-        },
-        {
-          Username:"shyam",
-          password: "3333",
-        },
-        {
-          Username:"Ram",
-          password: "4444",
-        },
-        {
-          Username:"adarsh",
-          password: "5555",
-        },
-        {
-          Username:"ankit",
-          password: "6666",
-        },
-        {
-          Username:"rishu",
-          password: "7777",
-        },
-      ]
-     
-  const login =()=>{
-    let user = document.getElementById("userInfo").value
-      console.log(user)
-      let pass =document.getElementById("userPass").value
-      console.log(pass)
-    let found = Constumer.find((e) => 
-         e.Username === user && e.password === pass
-      );
-      console.log(found)
-      if (found) {
-        alert("Login successful");
-      } else {
-        alert("Login failed");
-      }
+    // let myobj = {
+
+    //     name:"adarsh",
+    //     lastN:"pandey",
+    //     pass :"123",
+    //     email: "pandey@gmail.com"
+    // }
+    // console.log(myobj.name)
+    // console.log(myobj["name"])
+    // myobj.name = "aman";
+    // console.log(myobj)
+    // Object.freeze(myobj)
 
 
-     
-    
-  }
-      
+    //  let obj1 = {
+    //     key1: "value1",
+    //       key2: "value2",
+    //       key3: "value3"
+    //  }
 
-     </script>
+    //    let obj2 = {
+    //           key4: "value4",
+    //           key5: "value5",
+    //           key6: "value6"
+    //    }
+
+    //    let obj3 = {...obj1,...obj2}
+    //    console.log(obj3)
+    //    let obj4 = Object.assign({},obj1,obj2)
+    //    console.log(obj4)
+
+
+    // let Constumer = [
+    //   {
+    //     Username: "aman",
+    //     password: "1111",
+    //   },
+    //   {
+    //     Username: "Mohan",
+    //     password: "2222",
+    //   },
+    //   {
+    //     Username: "shyam",
+    //     password: "3333",
+    //   },
+    //   {
+    //     Username: "Ram",
+    //     password: "4444",
+    //   },
+    //   {
+    //     Username: "adarsh",
+    //     password: "5555",
+    //   },
+    //   {
+    //     Username: "ankit",
+    //     password: "6666",
+    //   },
+    //   {
+    //     Username: "rishu",
+    //     password: "7777",
+    //   },
+    // ]
+
+    // const login = () => {
+    //   let user = document.getElementById("userInfo").value
+    //   console.log(user)
+    //   let pass = document.getElementById("userPass").value
+    //   console.log(pass)
+    //   let found = Constumer.find((e) => e.Username === user && e.password === pass);
+    //   console.log(found)
+    //   if (found) {
+    //     alert("Login successful");
+    //   } else {
+    //     alert("Login failed");
+    //   }
+
+    // }
+
+
+
+
+  </script>
 </body>
+
 </html>
