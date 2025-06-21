@@ -4,14 +4,131 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        #h1 {
+            text-align: center;
+            color: #370e59;
+            font-size: 2em;
+            margin-top: 20px;
+        }
+        .newProd {
+            padding: 10px 20px;
+            align-self: center;
+            background-color: #292d9f;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            display: block;
+            margin: auto;
+
+            
+        }
+        .newProd:hover {
+            background-color: #45a049;
+        }
+        #See_list {
+            width: 300px;
+            border: 2px solid black;
+            padding: 20px;
+            background-color: antiquewhite;
+            position: sticky;
+            top: 100px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        #List_form {
+            width: 300px;
+            border: 2px solid black;
+            padding: 20px;
+            background-color: antiquewhite;
+            /* position: sticky; */
+            left: 50%;
+            
+        }
+        #List_form input {
+            width: 80%;
+            display: flex;
+            padding: 4px;
+            margin-top: 6px;
+            margin-bottom: 6px;
+            border: 1px solid black;
+            border-radius: 4px; 
+
+        }
+        #List_form button {
+            width: 30%;
+            padding: 4px;
+            margin-top: 6px;
+           
+            border: 1px solid black;
+            border-radius: 4px; 
+            background-color: lightblue;
+        }
+        #prod {
+            margin-top: 20px;
+           
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+           
+        }
+       
+
+        #prod h3 {
+            text-align: center;
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+        #prod p {
+            text-align: center;
+            font-size: 1em;
+            color: #555;
+        }
+        #prod div {
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            text-align: center;
+        }
+        #prod div:hover {
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+            transform: scale(1.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        #prod div button {
+            margin-top: 10px;
+            padding: 8px 12px;
+            border: none;
+            border-radius: 5px;
+            background-color: #370e59;
+            color: white;
+            cursor: pointer;
+            gap: 10px;
+        }
+        #prod div button:hover {
+            background-color: #218838;
+        }
+    </style>
 </head>
 <body>
-    
-         id: <input id="id" type="text" placeholder="enter id"><br><br>
-         image: <input id="img" type="text" placeholder="Enter image link"><br><br>
-         price : <input id="price" type="text" placeholder="enter your price"><br><br>
+    <h1 id="h1">Welcome to Website</h1>
+   <button class="newProd" onclick="newlistings()">Add products</button>
+    <div id="List_form">
+         id: <input id="id" type="text" placeholder="enter id">
+         image: <input id="img" type="text" placeholder="Enter image link">
+         price : <input id="price" type="text" placeholder="enter your price">
         <button onclick="addlist()">Add</button>
+    </div>
+     
  <br>
+ <div id="See_list">
+    <h2>Your List</h2>
+   
+   
+ </div>
     <div id="prod">
      
     </div>

@@ -1,22 +1,7 @@
-// let listing = {};
 
 
-window.addlist = ()=>{
-    let user_id = parseInt(document.getElementById("id").value);
-console.log(user_id);
-let user_img = document.getElementById("img").value;
-console.log(user_img);
- let price = parseInt(document.getElementById("price").value);
- console.log(price)
 
-let listobj = {
-  id: user_id,
-  Image : user_img,
-  Price: price,
-}
-console.log(listobj)
-product.push(listobj)
-}
+
 
 
  
