@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>this is locl storage</h1>
+
+    <script>
+        // localStorage.setItem("key" , "adarsh")
+        // localStorage.setItem("key" , "adarshpandey")
+        // let data = localStorage.getItem("key")
+        // console.log(data)
+
+        let data={
+            name:"adarsh",
+            age:22,
+        }
+        localStorage.setItem("key",JSON.stringify(data))
+        let localsto = JSON.parse(localStorage.getItem("key"))
+        console.log(localsto)
+    </script>
+
+
+</body>
+</html>

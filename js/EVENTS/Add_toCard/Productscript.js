@@ -28,13 +28,9 @@ let total = 0;
 let Add_list = document.getElementById("See_list")
 Add_list.style.display = "none";
 window.addproduct = (price) => {
-
     Add_list.style.display = "block";
     r = r + price;
     total=total+1;
- 
-        
-   
         Add_list.innerHTML = 
     `
     <h2>Your List Card</h2>
