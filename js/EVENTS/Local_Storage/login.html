@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>please login</h1>
+    <form action="" id="form">
+        Email: <input type="text" id="email" required> <br>
+        password : <input type="text" id="pass" required> <br>
+        <input type="submit" value="login">
+        <input type="submit" value="register" onclick="register()">
+        
+    </form>
+    <div id="invalid"></div>
+
+    <script>
+     
+        let user = JSON.parse(localStorage.getItem("user")|| '[]');
+        let invalid = document.getElementById("invalid")
+        console.log(user)
+        let form  = document.getElementById("form")
+        form.addEventListener("submit", (e)=>{
+            e.preventDefault();
+               let email = document.getElementById("email").value 
+               let password = document.getElementById("pass").value 
+               console.log(email,password)
+             let founduser =  user.find((e=>e.email===email && e.password===password))
+             if(founduser){
+                localStorage.setItem('islogin',JSON.stringify(founduser))
+                // window.location.href = "../Add_toCard/Add_to_card.html"
+                window.location.href = "userdasboard.html"
+             } else{
+                // alert("invalid user")
+                invalid.innerHTML= `<h1>user pass invalid</h1>`
+             }
+        })
+
+        const register=()=>{
+            window.location.href = "registation.html"
+        }
+    </script>
+</body>
+</html>

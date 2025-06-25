@@ -1,4 +1,4 @@
-let user = []
+let user = JSON.parse(localStorage.getItem("user")|| '[]');
 
 const userinfo = (e)=>{
     e.preventDefault();
@@ -9,7 +9,8 @@ const userinfo = (e)=>{
     let z = {name,email,mobile,password}
     user.push(z)
     localStorage.setItem("user",JSON.stringify(user));
-    console.log(user)
+    // console.log(user)
+    window.location.href = "login.html"
 
 }
 document.addEventListener("DOMContentLoaded",()=>{

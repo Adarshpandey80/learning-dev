@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Welcome to dashboard</h1>
+    <div id="data"></div>
+    <input type="submit" value="LOGOUT" onclick="logout()">
+    <input type="submit" value="UPDATE" onclick="window.location.href = 'update.html'" id='btn'>
+
+
+    <script>
+      
+        let islogin = JSON.parse(localStorage.getItem("islogin"))
+        if(islogin){
+             let data = document.getElementById("data")
+        data.innerHTML = `
+        <h1>${islogin.name}</h1>
+        <h1>${islogin.email}</h1>
+        <h1>${islogin.mobile}</h1>
+        <h1>${islogin.password}</h1>
+        `
+        } else {
+            data.innerHTML = "<h1>Please Login</h1>"
+        }
+       
+        const logout = () => {
+            localStorage.removeItem("islogin")
+            window.location.href = "login.html"
+            let btn = document.querySelectorAll("#bnt")
+            btn.forEach((e)=>{
+                e.style.display = "none"
+            })
+        }
+        
+
+       
+
+    </script>
+</body>
+
+</html>
