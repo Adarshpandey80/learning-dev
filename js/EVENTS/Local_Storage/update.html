@@ -22,6 +22,8 @@
          
         let islogin= JSON.parse(localStorage.getItem("islogin"))
         console.log(islogin)
+        let user = JSON.parse(localStorage.getItem("user")  || '[]')
+        console.log(user)
         document.getElementById("name").value = islogin.name;
         document.getElementById("email").value = islogin.email;
         document.getElementById("mobile").value = islogin.mobile;
@@ -35,8 +37,22 @@
             mobile: document.getElementById("mobile").value,
             password:  document.getElementById("password").value ,
         }
+       
+       user = user.map((u)=>{
+       
+            if(islogin.email===u.email){
+               return updatedata;
+            }
+            return u;
+        })
         console.log(updatedata)
+       
+        localStorage.setItem("islogin",JSON.stringify(updatedata))
+         localStorage.setItem("user",JSON.stringify(user))
         window.location.href = "userdasboard.html";
+        console.log(updatedata)
+       
+        
      })
     </script>
 </body>
