@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>eror and promises in js</h1>
+
+  <div id="itoms"></div>
+
+
+
+
+    <script>
+        // console.log("error promis is js")
+        // try{
+          
+        // console.log(x)
+        // } catch (e){
+        //     throw new Error ("x is not define")
+        // }
+        // finally{
+        //     console.log("prog is finished")
+        // }
+
+        let pro = new Promise((a,r)=>{
+            let car = fetch("https://fakestoreapi.in/api/products");
+            if(car){
+                car.then((e)=>{
+                    a(e.json())
+                })
+            }else{
+                r("reject")
+            }
+        })
+        pro.then((e)=>{
+            let data = e.products;
+            data.map((e)=>{
+                let itom = e;
+                console.log(itom)
+                document.getElementById("itoms").innerHTML = `${itom.title}`
+
+            })
+        })
+        
+    </script>
+</body>
+</html>
