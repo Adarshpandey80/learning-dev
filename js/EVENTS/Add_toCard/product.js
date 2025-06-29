@@ -1,13 +1,6 @@
 
 
-
-
-
-
- 
-
-
-let product = [
+let product1 = [
     {
         id:1,
         Image:"/bikesimages/bike1.jpeg",
@@ -31,4 +24,4 @@ let product = [
 ]
 
 
-export default product;
+export default product1;

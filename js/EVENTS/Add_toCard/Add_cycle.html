@@ -14,7 +14,7 @@
             margin-top: 20px;
         }
         .newProd {
-           margin-top: 20px;
+          
             padding: 10px 20px;
             align-self: center;
             background-color: #292d9f;
@@ -23,7 +23,7 @@
             border-radius: 5px;
             cursor: pointer;
             display: block;
-            margin: auto ;
+            margin: auto;
 
             
         }
@@ -68,7 +68,7 @@
             border-radius: 4px; 
             background-color: lightblue;
         }
-        #prod {
+        #prodcycle {
             margin-top: 70px;
            
             width: 100%;
@@ -79,29 +79,29 @@
         }
        
 
-        #prod h3 {
+        #prodcycle h3 {
             text-align: center;
             font-size: 1.2em;
             margin-top: 10px;
         }
-        #prod p {
+        #prodcycle p {
             text-align: center;
             font-size: 1em;
             color: #555;
         }
-        #prod div {
+        #prodcycle div {
             border: 1px solid #ccc;
             border-radius: 10px;
             padding: 10px;
             background-color: #f9f9f9;
             text-align: center;
         }
-        #prod div:hover {
+        #prodcycle div:hover {
             box-shadow: 0 0 15px rgba(0,0,0,0.2);
             transform: scale(1.05);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-        #prod div button {
+        #prodcycle div button {
             margin-top: 10px;
             padding: 8px 12px;
             border: none;
@@ -163,7 +163,7 @@
         <nav id="nav">
             <h2 class="logo"> Az website</h2>
             <ul class="nav-links">
-                <li><a href="home.html">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                
                 <li><a href="../Local_Storage/userdasboard.html">User Dashboard</a></li>
                 <li class="nav-item dropdown">
@@ -179,9 +179,9 @@
 
         </nav>
     </header>
-
+  
    <button class="newProd" onclick="newlistings()" style="margin-top: 30px;">Add products</button>
-   
+   <!-- <a href="../Local_Storage/userdasboard.html">User Profile</a> -->
     <div id="List_form">
          id: <input id="id" type="text" placeholder="enter id">
          image: <input id="img" type="text" placeholder="Enter image link">
@@ -190,12 +190,12 @@
     </div>
      
  <br>
- <div id="See_list">
+ <!-- <div id="See_list">
     <h2>Your List</h2>
    
    
- </div>
-    <div id="prod">
+ </div> -->
+    <div id="prodcycle">
      
     </div>
     
@@ -203,6 +203,6 @@
         integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
         crossorigin="anonymous"></script>
 
-    <script src="Productscript.js" type="module"></script>
+    <script src="cycleproduct.js" type="module"></script>
 </body>
 </html>

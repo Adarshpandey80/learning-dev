@@ -1,18 +1,19 @@
-
-import product from "./product.js";
-
-
+import product  from "./product1.js";  
+ 
 
 let form = document.getElementById("List_form");
 form.style.display = "none";
 
 console.log(product);
-let prod = document.getElementById("prod");
+let prodcar = document.getElementById("prodcar");
+let prodcycle = document.getElementById("prodcycle");
 
-console.log(prod);
+console.log(prodcar);
+console.log(prodcycle);
+
 
 function renderProducts() {
-    prod.innerHTML = product.map((item) => {
+    prodcar.innerHTML = product.map((item) => {
         return `
          <div  class="product">
                 <h3>Product Name</h3>
@@ -25,41 +26,9 @@ function renderProducts() {
     }).join('');
 }
 
-
-
-
 renderProducts();
 
-let r = 0;
-let total = 0;
-let Add_list = document.getElementById("See_list");
-Add_list.style.display = "none";
 
-window.addproduct = (price) => {
-    Add_list.style.display = "block";
-    r = r + price;
-    total = total + 1;
-    Add_list.innerHTML = `
-    <h2>Your List Card</h2>
-    <h3>Total Bill: ${r}</h3>
-    <h3>Items:${total}</h3>
-    `;
-};
-
-window.discardproduct = (price) => {
-    r = r - price;
-    total = total - 1;
-    if (total == 0) {
-        Add_list.innerHTML = `<h2>No product list</h2>`;
-        total = 0;
-    } else {
-        Add_list.innerHTML = `
-        <h2>Your List Card</h2>
-        <h3>Total Price: ${r}</h3>
-        <h3>Items:${total}</h3>
-        `;
-    }
-};
 
 
 
@@ -85,5 +54,3 @@ window.addlist = () => {
     document.getElementById("img").value = "";
     document.getElementById("price").value = "";
 };
-
-
