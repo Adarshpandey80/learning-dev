@@ -6,9 +6,92 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>eror and promises in js</h1>
+    <style>
+        body{
+            background-color: rgb(255, 255, 255);
+            color: rgb(0, 0, 0);
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        h1{
+            color: rgb(66, 5, 234);
+            font-size: 30px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        #itoms{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            background-size: cover;
+         
+        }
+        #card{
+            width: 400px;
+            height: 450px;
+            border: 2px solid black;
+            margin: 10px;
+            padding: 10px;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            
+            transition: transform 0.2s;
+            
+           
+           
+        } 
+        #card img{
+            width: 100px;
+            height: 100px;
+            display: block;
+            margin: 0 auto;
+            border-radius: 10px;
+            object-fit: cover;
+            transition: transform 0.2s;
+            background-color: rgb(75, 68, 68);
+           
 
-  <div id="itoms"></div>
+
+        }
+        #card h2{
+            font-size: 15px;
+            color: rgb(66, 5, 234);
+        }   
+        #card p{
+            font-size: 15px;
+            color: rgb(66, 5, 234);
+        }
+        #card strong{
+            font-size: 20px;
+            color: rgb(1, 1, 1);
+            display: block;
+            margin-top: 10px;
+
+        }
+        #card button{   
+            width: 100px;
+            height: 30px;
+            background-color: blue;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+        #card button:hover{
+            background-color: green;
+        }
+
+
+    </style>
+    <h1>API fatch and promises in js</h1>
+
+  <div id="itoms">
+   
+  </div>
 
 
 
@@ -35,13 +118,23 @@
                 r("reject")
             }
         })
+        let itoms = document.getElementById("itoms");
         pro.then((e)=>{
             let data = e.products;
-            data.map((e)=>{
-                let itom = e;
-                console.log(itom)
-                document.getElementById("itoms").innerHTML = `${itom.title}`
+            console.log(data)
+           itoms.innerHTML =  data.map((e)=>{
+                return `
+                 <div id="card">
+             <h2>brand:${e.brand}</h2>
+            <h2>title: ${e.title}</h2>
+            <h2>category:${e.category}</h2>
+            <p>description: ${e.description.slice(0,150)}</p>
+            <img src="${e.image}"" alt="">
+            <strong>Price: ${e.price}</strong>
+            <button>Add</button>
 
+          </div>
+                `
             })
         })
         
