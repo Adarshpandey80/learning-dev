@@ -1,31 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-     <h1>hello js</h1>
-     <div id="products"></div>
-     <button onclick="getallproduct()">getdata</button>
+    <h1>hello js</h1>
+    <div id="products"></div>
+    <button onclick="getallproduct()">getdata</button>
     <form action="">
         <fieldset>
-            <legend> Add product  </legend>
-                title : <input type="text" id="title"> <br>
-                price : <input type="text" id="price"> <br>
-           
+            <legend> Add product </legend>
+            title : <input type="text" id="title"> <br>
+            price : <input type="text" id="price"> <br>
             <button type="button" onclick="addproduct()">Addproduct</button>
         </fieldset>
+     </form>
+    <form action="">    
         <fieldset>
-            <legend> update product  </legend>
+            <legend> update product </legend>
             id : <input type="text" id="id"> <br>
-                title : <input type="text" id="utitle"> <br>
-                price : <input type="text" id="uprice"> <br>
-           
+            title : <input type="text" id="utitle"> <br>
+            price : <input type="text" id="uprice"> <br>
+
             <button type="button" onclick="updateproduct()">Addproduct</button>
+        </fieldset>
+
+    </form>
+    <form action="">    
+        <fieldset>
+            <legend> delete product </legend>
+            id : <input type="text" id="id"> <br>
+            <button type="button" onclick="deleteproduct()">Deleteproduct</button>
         </fieldset>
     </form>
     <script src="app.js"></script>
 </body>
+
 </html>

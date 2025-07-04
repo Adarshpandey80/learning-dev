@@ -62,3 +62,17 @@ const updateproduct = async()=>{
          console.log(error);
     }
 }
+
+const deleteproduct = async()=>{
+      let id = document.getElementById("id").value;
+      try {
+        await fetch(`${basurl}/${id}` , {
+                method :"DELETE"
+        });
+        alert("deleted")
+        getallproduct()
+      } catch (error) {
+        console.log(error)
+      }
+}
+
