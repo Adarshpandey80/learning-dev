@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <h1>DJ light </h1>
+     <div id="light"></div>
+     <button onclick="djlight()">Djlight</button>
+
+
+     <script>
+        let clr = ["0","1","2","3","4","5","6","7","8","9","a","b","c","d","e","f"]
+
+        const djlight = ()=>{
+            let x = "#";
+            for(let i=0;i<6;i++){
+               let n = Math.floor(Math.random()*16)
+               x=x+clr[n]
+            }
+             document.body.style.backgroundColor =x
+        }
+       
+        setInterval (djlight , 10)
+     </script>
+</body>
+</html>
