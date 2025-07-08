@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form  action="abc.html" onsubmit="return handlesubmit(event)">
+        name: <input type="text" id="a" name="name" > <br>
+        email: <input type="email" id="b" name="email" > <br>
+        password: <input type="text" id="p1" name="password"> <br>
+        repassword : <input type="text" id="p2" name="repassword"> <br>
+        mobile: <input type="text" id="no" name="mobile" > <br>
+        <input type="submit" value="signup">
+    </form>
+    <div id="data"></div>
+
+    <script>
+        const handlesubmit = (e) => {
+            console.log("handlesubmit called");
+            let name = document.getElementById("a").value;
+            let email = document.getElementById("b").value;
+            let password = document.getElementById("p1").value;
+            let repassword = document.getElementById("p2").value;
+            let mobile = document.getElementById("no").value;
+
+            if(name == "" || email == "" || password == "" || repassword == "" || mobile == ""){
+               document.getElementById("data").innerHTML = "<h1>Please fill all fields</h1>";
+               e.preventDefault();
+               return false;
+            } 
+            else if (password!==repassword){
+                document.getElementById("data").innerHTML = "<h1>Please enter same password</h1>";
+                e.preventDefault();
+                return false;
+            }
+            else if (mobile.length!==10){
+                document.getElementById("data").innerHTML = "<h1>Please enter 10 digit</h1>";
+                e.preventDefault();
+                return false;
+            }
+            else if (isNaN(mobile)){
+                document.getElementById("data").innerHTML = "<h1>Please enter only digits</h1>";
+                e.preventDefault();
+                return false;
+            }
+            else {
+                return true;
+            }
+        }
+
+    </script>
+</body>
+</html>
