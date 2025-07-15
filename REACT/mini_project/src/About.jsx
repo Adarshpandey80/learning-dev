@@ -1,6 +1,9 @@
 import React from 'react'
 import './style.css'
-const About = () => {
+const About = (props) => {
+    let data1 = props.data;
+    let img = props.data;
+   
     return (
         <>
             <div className='about'>
@@ -17,7 +20,15 @@ const About = () => {
                            and vehicles engineered to elevate every journey. Your next adventure starts here—find the car that speaks to you and hit the road with confidence</p>
                 </div>
             </div>
-
+            <h1>Array Data:</h1>
+           {
+            img.map((e)=>{
+                return (
+                    <img src={e} alt="" height={"200px"} width={"200px"} key={e} style={{margin: "10px"}}/>
+                )
+            })
+           }
+            
         </>
     )
 }
