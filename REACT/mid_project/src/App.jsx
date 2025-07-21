@@ -2,6 +2,12 @@ import { useState } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Page1 from './component/Page1.jsx'
 import Page2 from './component/Page2.jsx'
+import Nav from './component/Nav.jsx'
+import Dasboard from './component/Dasboard.jsx'
+
+import { useNavigate } from 'react-router-dom'
+
+
 
 function App() {
   // const [initial, updateInitial] = useState(0)
@@ -11,8 +17,19 @@ function App() {
     <>
     {/* <h1>value:{initial}</h1> */}
     {/* <input type="text" onChange={()=>updateInitial(initial+1)} /> */}
-    <Page2/>
-      <Page1 />
+      
+    <Router>
+      <Nav />
+      <Routes>
+       
+        <Route path="/page1" element={<Page1 />} />
+        <Route path="/page2" element={<Page2 />} />
+        <Route path="/dashboard" element={<Dasboard />} />
+      </Routes>
+    </Router>
+   
+    {/* <Page1 /> */}
+     
     </>
   )
 }

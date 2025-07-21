@@ -1,0 +1,14 @@
+{
+  "user": [
+    {
+      "id": 1,
+      "name": "John Doe"
+    },
+    {
+      "id": "5b6f",
+      "namekey": "adarsh",
+      "email": "ad@gmail.com",
+      "password": "123"
+    }
+  ]
+}
