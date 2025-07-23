@@ -2,8 +2,12 @@ import React from 'react'
 import {useState} from 'react'
 import '../mycss/style.css'
 import axios from 'axios'
+import { useNavigate } from 'react-router-dom'
+
+
 
 const Page2 = () => {
+  const navigate=useNavigate();
   const API_URL = "http://localhost:3001/user"
     const[formdata,updateformdata] = useState({
         namekey:"",
@@ -23,9 +27,11 @@ const Page2 = () => {
         e.preventDefault();
         try { 
           await axios.post(API_URL,formdata);
+         navigate('/dashboard',{state:formdata});
+
         }
         catch (error) {
-          alert("Error in signing up, please try again later.");
+          console.log(error)
         }
     }
 

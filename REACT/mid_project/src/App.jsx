@@ -4,8 +4,8 @@ import Page1 from './component/Page1.jsx'
 import Page2 from './component/Page2.jsx'
 import Nav from './component/Nav.jsx'
 import Dasboard from './component/Dasboard.jsx'
+import Superdashboard from './component/Superdashboard.jsx'
 
-import { useNavigate } from 'react-router-dom'
 
 
 
@@ -25,6 +25,7 @@ function App() {
         <Route path="/page1" element={<Page1 />} />
         <Route path="/page2" element={<Page2 />} />
         <Route path="/dashboard" element={<Dasboard />} />
+        <Route path="/super" element={<Superdashboard />} />
       </Routes>
     </Router>
    

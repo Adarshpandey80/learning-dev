@@ -35,3 +35,27 @@ form {
     padding: 5px 10px;
  
 }
+
+
+/* ====================tabel data========= */
+
+table {
+    width: 100%;
+   height: auto;
+   background-color: yellow;
+   border: 2px solid black;
+}
+
+th {
+    background-color: black;
+    color: white;
+    padding: 10px;
+}
+td {
+   
+    text-align: center;
+}
+td, th {
+    border: 1px solid black;
+    padding: 10px;
+}
