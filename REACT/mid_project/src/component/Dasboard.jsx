@@ -8,7 +8,7 @@ const Dasboard = () => {
   return (
     <>
     <h1>Welcome to the Dashboard</h1>
-    <h2>Neme : {formdata.name}</h2>
+    <h2>Neme : {formdata.namekey}</h2>
     <h2>Email : {formdata.email}</h2>
     <h2>Password : {formdata.password}</h2>
     <div>

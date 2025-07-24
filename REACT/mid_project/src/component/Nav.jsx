@@ -11,6 +11,10 @@ const Nav = () => {
         <li><Link to={"/Page1"}>Page1</Link></li>
         <li><Link to={"/page2"}>Form</Link></li>
         <li><Link to={"/dashboard"}>Dashboard</Link></li>
+        <li><Link to={"/super"}>SuperDashboard</Link></li>        
+        <li><Link to={"/task"}>Task</Link></li>        
+
+
       </ul>
     </nav>
   </>

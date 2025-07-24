@@ -5,7 +5,7 @@ import Page2 from './component/Page2.jsx'
 import Nav from './component/Nav.jsx'
 import Dasboard from './component/Dasboard.jsx'
 import Superdashboard from './component/Superdashboard.jsx'
-
+import Task from './component/Task.jsx'
 
 
 
@@ -26,6 +26,7 @@ function App() {
         <Route path="/page2" element={<Page2 />} />
         <Route path="/dashboard" element={<Dasboard />} />
         <Route path="/super" element={<Superdashboard />} />
+        <Route path="/task" element={<Task />} />
       </Routes>
     </Router>
    

@@ -75,6 +75,12 @@
       "namekey": "aman",
       "email": "aman@gmail.com",
       "password": "1212"
+    },
+    {
+      "id": "7010",
+      "namekey": "newname",
+      "email": "new@gmail.com",
+      "password": "222"
     }
   ]
 }
