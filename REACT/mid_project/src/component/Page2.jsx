@@ -38,7 +38,7 @@ const Page2 = () => {
   return (
    <>
    <h1>This is form page</h1>
-   <form action="" onSubmit={signupdate}>
+   <form action="" onSubmit={signupdate} className='form'>
     <input type="text" name='namekey' value={formdata.namekey} onChange={handlchange} /> 
     <br />
     <input type="text" name='email' value={formdata.email} onChange={handlchange} />

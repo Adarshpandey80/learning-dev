@@ -17,8 +17,8 @@ const Task = () => {
     fetchdata();
   return (
     <>
-    <h1>Ferch fake API</h1>
-    <div>
+    <h1>Fetch fake API</h1>
+    
       
         <div className='product'>
             {
@@ -34,7 +34,7 @@ const Task = () => {
                 })
             }
         </div>
-    </div>
+    
     </>
   )
 }

@@ -1,86 +1,10 @@
 {
   "user": [
     {
-      "id": "1",
-      "name": "John Doe"
-    },
-    {
-      "id": "5b6f",
-      "namekey": "adarsh",
-      "email": "ad@gmail.com",
-      "password": "123"
-    },
-    {
-      "id": "25a2",
-      "namekey": "Adarsh",
-      "email": "pandey@gmail.com",
-      "password": "1234"
-    },
-    {
-      "id": "fcc5",
-      "namekey": "Adarsh",
-      "email": "pandey@gmail.com",
-      "password": "1234"
-    },
-    {
-      "id": "de60",
+      "id": "c811",
       "namekey": "harsh",
-      "email": "harsh@gmail.com",
-      "password": "2222"
-    },
-    {
-      "id": "6ef2",
-      "namekey": "aman",
-      "email": "aman@gmail.com",
-      "password": "000"
-    },
-    {
-      "id": "c9e1",
-      "namekey": "aman",
-      "email": "aman@gmail.com",
-      "password": "000"
-    },
-    {
-      "id": "e013",
-      "namekey": "aman",
-      "email": "aman@gmail.com",
-      "password": "000"
-    },
-    {
-      "id": "e0e7",
-      "namekey": "aman",
-      "email": "aman@gmail.com",
-      "password": "1212"
-    },
-    {
-      "id": "9f9d",
-      "namekey": "aman",
-      "email": "aman@gmail.com",
-      "password": "1212"
-    },
-    {
-      "id": "a0fa",
-      "namekey": "rishu",
-      "email": "rishu@gmail.com",
-      "password": "1234"
-    },
-    {
-      "id": "c1df",
-      "namekey": "rishu",
-      "email": "rishu@gmail.com",
-      "password": "1234"
-    },
-    {
-      "id": "3d48",
-      "namekey": "aman",
-      "email": "aman@gmail.com",
-      "password": "1212"
-    },
-    {
-      "id": "7010",
-      "namekey": "newname",
-      "email": "new@gmail.com",
-      "password": "222"
+      "email": "hr@gmail.com",
+      "password": "111"
     }
   ]
 }
