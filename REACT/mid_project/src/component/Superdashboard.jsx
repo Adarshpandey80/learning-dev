@@ -69,13 +69,11 @@ const Superdashboard = () => {
     const userUpdate = async (id) => {
         setuserid(id)
         const user = initialdata.find((u) => u.id === id)
-        updatadata({
-            name: user.namekey || '',
+        updateformdata({
+            namekey: user.namekey || '',
             email: user.email || '',
             password: user.password || ''
         })
-
-
     }
 
 
