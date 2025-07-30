@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import {useState} from 'react'
 import '../mycss/style.css'
 import axios from 'axios'
@@ -9,9 +9,20 @@ import { useNavigate } from 'react-router-dom'
 const Page2 = () => {
   const navigate=useNavigate();
   const API_URL = "http://localhost:3001/user"
+
+   const [userdata , updateuserdata] = useState([])
+   const validate = async () => {
+    let response = await axios.get(API_URL)
+    updateuserdata(response.data);
+   }
+   useEffect(()=>{
+    validate();
+   },[])
+  console.log(userdata)
+
     const[formdata,updateformdata] = useState({
         namekey:"",
-        email:"@gmail.com",
+        email:"",
         password:""
     })
 
@@ -26,8 +37,13 @@ const Page2 = () => {
     const signupdate=async(e)=>{
         e.preventDefault();
         try { 
+          // Check if email already exists
+          if(userdata.find((e)=> e.email == formdata.email)){
+            alert("Email already exists");
+            navigate('/page2');
+          }
           await axios.post(API_URL,formdata);
-         navigate('/dashboard',{state:formdata});
+        //  navigate('/dashboard',{state:formdata});
 
         }
         catch (error) {
@@ -47,9 +63,7 @@ const Page2 = () => {
     <br />
     <button>submit</button>
    </form>
-   <h1>your name:{formdata.namekey}</h1>
-   <h1>your Email:{formdata.email}</h1>
-  <h1>your Password:{formdata.password}</h1>
+   
    </>
   )
 }

@@ -6,6 +6,7 @@ import Nav from './component/Nav.jsx'
 import Dasboard from './component/Dasboard.jsx'
 import Superdashboard from './component/Superdashboard.jsx'
 import Task from './component/Task.jsx'
+import Task2 from './component/Task2.jsx'
 
 
 
@@ -27,6 +28,7 @@ function App() {
         <Route path="/dashboard" element={<Dasboard />} />
         <Route path="/super" element={<Superdashboard />} />
         <Route path="/task" element={<Task />} />
+        <Route path="/task2" element={<Task2 />} />
       </Routes>
     </Router>
    
