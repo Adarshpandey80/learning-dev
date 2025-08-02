@@ -1,10 +1,12 @@
-import { useState , useEffect   } from 'react';
+import { useState , useEffect , createContext  } from 'react';
 import { useRef } from 'react';
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
 
+
+import Child1 from './component/Child1';
+const myprovider = createContext();
 function App() {
+  const [name , setname] = useState("Adarsh")
+  const [mobile , setmobile] = useState("123456")
   // const [initalstate, setfinalInital] = useState(0);
   //   let Val = useRef(0);
   //   let clr = useRef(null);
@@ -27,19 +29,19 @@ function App() {
 
   // stop watch programming 
 
-  const [time , setTime] = useState(0);
-  let timeref = useRef(null);
- const startwatch =()=>{
-  timeref.current = setInterval(() => {
-      setTime((time) => time + 1);
-    }, 1000);
- }
- const storpwatch = () => {
-  clearInterval(timeref.current);
- }
-  const clearintervel = () => {
-  setTime(0);
-  }
+//   const [time , setTime] = useState(0);
+//   let timeref = useRef(null);
+//  const startwatch =()=>{
+//   timeref.current = setInterval(() => {
+//       setTime((time) => time + 1);
+//     }, 1000);
+//  }
+//  const storpwatch = () => {
+//   clearInterval(timeref.current);
+//  }
+//   const clearintervel = () => {
+//   setTime(0);
+//   }
   return (
     // <>
     // <div>
@@ -54,15 +56,21 @@ function App() {
     // </>
 
     <>
-    <div>
+    {/* <div>
       <h1>Stop Watch</h1>
       <h2>{time}</h2>
       <button onClick={startwatch}>Start</button>
       <button onClick={storpwatch}>stop</button>
       <button  onClick={clearintervel}>Reset</button>
-    </div>
+    </div> */}
+
+
+    <myprovider.Provider value={{mobile,setmobile}}>
+      <Child1 val1={name}/>
+    </myprovider.Provider>
     </>
   )
 }
 
-export default App
+export default App;
+export { myprovider};
