@@ -6,8 +6,8 @@ const Child1 = (props) => {
   return (
    <>
    <h1>child one</h1>
-   <h1>name:{props.val1}</h1>
-   <Child2 val1={props.val1}/>
+ 
+   <Child2 />
    </>
   )
 }

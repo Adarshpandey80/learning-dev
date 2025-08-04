@@ -1,12 +1,25 @@
 import { useState , useEffect , createContext  } from 'react';
 import { useRef } from 'react';
-
-
+import axios from 'axios';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Nav from './component/Nav';
+import Child2 from './component/Child2';
+import Child3 from './component/Child3';
 import Child1 from './component/Child1';
 const myprovider = createContext();
+
+
 function App() {
-  const [name , setname] = useState("Adarsh")
+  const API_URL = "http://localhost:3002/products";
+   const [name , setname] = useState([])
   const [mobile , setmobile] = useState("123456")
+  const fetchdata =  async()=>{
+    let res = await axios.get(API_URL);
+    setname(res.data);
+  }
+  useEffect(()=>{
+    fetchdata();
+  },[])
   // const [initalstate, setfinalInital] = useState(0);
   //   let Val = useRef(0);
   //   let clr = useRef(null);
@@ -63,10 +76,18 @@ function App() {
       <button onClick={storpwatch}>stop</button>
       <button  onClick={clearintervel}>Reset</button>
     </div> */}
+    <Router>
+      <Nav />
+      <Routes>
+      <Route path="/Child1" element={<Child1 />} />
+      <Route path="/Child2" element={<Child2  />} />
+      <Route path="/Child3" element={<Child3  />} />
+      </Routes>
+    </Router>
 
 
-    <myprovider.Provider value={{mobile,setmobile}}>
-      <Child1 val1={name}/>
+    <myprovider.Provider value={name}>
+      <Child1 />
     </myprovider.Provider>
     </>
   )
