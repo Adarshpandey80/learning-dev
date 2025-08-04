@@ -5,7 +5,7 @@ import '../index.css'
 
 
 const Child3 = () => {
-    const {mobile , setmobile} = useContext(myprovider)
+    // const {mobile , setmobile} = useContext(myprovider)
   const name = useContext(myprovider)
     
   return (

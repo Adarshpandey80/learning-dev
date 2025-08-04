@@ -69,25 +69,15 @@ function App() {
     // </>
 
     <>
-    {/* <div>
-      <h1>Stop Watch</h1>
-      <h2>{time}</h2>
-      <button onClick={startwatch}>Start</button>
-      <button onClick={storpwatch}>stop</button>
-      <button  onClick={clearintervel}>Reset</button>
-    </div> */}
-    <Router>
-      <Nav />
-      <Routes>
-      <Route path="/Child1" element={<Child1 />} />
-      <Route path="/Child2" element={<Child2  />} />
-      <Route path="/Child3" element={<Child3  />} />
-      </Routes>
-    </Router>
-
-
     <myprovider.Provider value={name}>
-      <Child1 />
+      <Router>
+        <Nav />
+        <Routes>
+          <Route path="/Child1" element={<Child1/>} />
+          <Route path="/Child2" element={<Child2/>} />
+          <Route path="/Child3" element={<Child3/>} />
+        </Routes>
+      </Router>
     </myprovider.Provider>
     </>
   )
