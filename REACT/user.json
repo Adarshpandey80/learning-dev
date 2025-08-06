@@ -1,0 +1,11 @@
+{
+    "user" : [
+        {
+            "id": "2be4",
+            "name": "aman",
+            "email": " aman@gmail.com",
+            "password": "123445",
+            "mobile" : "1234567890"
+        }
+    ]
+}
