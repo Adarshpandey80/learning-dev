@@ -1,11 +1,18 @@
 {
-    "user" : [
-        {
-            "id": "2be4",
-            "name": "aman",
-            "email": " aman@gmail.com",
-            "password": "123445",
-            "mobile" : "1234567890"
-        }
-    ]
+  "user": [
+    {
+      "id": "2be4",
+      "name": "aman",
+      "email": " aman@gmail.com",
+      "password": "123445",
+      "mobile": "1234567890"
+    },
+    {
+      "id": "041f",
+      "name": "adarsh",
+      "email": "ad@gmail.com",
+      "password": "1234",
+      "mobile": "9080587220"
+    }
+  ]
 }
