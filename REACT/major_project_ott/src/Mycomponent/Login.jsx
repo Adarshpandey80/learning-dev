@@ -1,49 +1,66 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 const Login = () => {
   return (
    <>
     <div className="min-h-screen flex items-center justify-center bg-gray-100 px-4">
-      <div className="bg-white p-8 rounded-lg shadow-md w-full max-w-md">
-        <h2 className="text-2xl font-bold text-center text-blue-600 mb-6">
-          Login
-        </h2>
-
-        <form className="space-y-4">
-          {/* Email */}
+      <div className="max-w-md w-full bg-white shadow-md rounded-lg p-8">
+        <h2 className="text-2xl font-bold text-center text-gray-800 mb-6">Login to Your Account</h2>
+        
+        <form className="space-y-6">
           <div>
-            <label className="block mb-1 text-sm text-gray-600">Email</label>
+            <label htmlFor="email" className="block text-sm font-medium text-gray-700">
+              Email Address
+            </label>
             <input
               type="email"
-              placeholder="you@example.com"
-              className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+              id="email"
+              autoComplete="email"
+              required
+              className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
             />
           </div>
 
-          {/* Password */}
           <div>
-            <label className="block mb-1 text-sm text-gray-600">Password</label>
+            <label htmlFor="password" className="block text-sm font-medium text-gray-700">
+              Password
+            </label>
             <input
               type="password"
-              placeholder="••••••••"
-              className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+              id="password"
+              autoComplete="current-password"
+              required
+              className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
             />
           </div>
 
-          {/* Submit Button */}
+          <div className="flex items-center justify-between">
+            <label className="flex items-center">
+              <input type="checkbox" className="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded" />
+              <span className="ml-2 text-sm text-gray-600">Remember me</span>
+            </label>
+
+            <div className="text-sm">
+              <Link to="/forgot-password" className="text-indigo-600 hover:text-indigo-500">
+                Forgot password?
+              </Link>
+            </div>
+          </div>
+
           <button
             type="submit"
-            className="w-full bg-blue-600 text-white font-semibold py-2 rounded-md hover:bg-blue-700 transition"
+            className="w-full flex justify-center py-2 px-4 border border-transparent text-white bg-indigo-600 hover:bg-indigo-700 rounded-md shadow-sm font-medium"
           >
-            Login
+            Sign in
           </button>
         </form>
 
-        <p className="text-sm text-center text-gray-500 mt-4">
-          Don’t have an account?{' '}
-          <a href="#" className="text-blue-600 hover:underline">
+        <p className="mt-6 text-center text-sm text-gray-600">
+          Don't have an account?{' '}
+          <Link to="/signup" className="font-medium text-indigo-600 hover:text-indigo-500">
             Sign up
-          </a>
+          </Link>
         </p>
       </div>
     </div>
