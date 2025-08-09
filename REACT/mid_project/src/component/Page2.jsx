@@ -43,7 +43,7 @@ const Page2 = () => {
             navigate('/page2');
           }
           await axios.post(API_URL,formdata);
-        //  navigate('/dashboard',{state:formdata});
+        
 
         }
         catch (error) {

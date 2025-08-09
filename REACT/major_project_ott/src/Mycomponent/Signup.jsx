@@ -2,7 +2,12 @@ import React from 'react'
 import axios from 'axios'
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+
+
+
 const Signup = () => {
+  const navigate = useNavigate();
   const API_URL = "http://localhost:3000/user";
   const [userData, setUserdata] = useState({
     name:"",
@@ -19,11 +24,18 @@ const Signup = () => {
 
   }
 
+    const [showdata , setShowdata] = useState([])
+
   const signupdata =async (e)=>{
      e.preventDefault();
 
       try {
+       if(showdata.find((e)=>e.email ===userData.email)){
+        alert("Email already exists");
+        navigate('/signup');
         
+       }
+
         await axios.post(API_URL,userData)
         
       } catch (error) {
@@ -32,7 +44,7 @@ const Signup = () => {
   }
 
 
-  const [showdata , setShowdata] = useState([])
+
   const showuserdata = ()=>{
 
     let res = axios.get(API_URL)
