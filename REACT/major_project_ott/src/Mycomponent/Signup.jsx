@@ -1,6 +1,7 @@
 import React from 'react'
 import axios from 'axios'
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 const Signup = () => {
   const API_URL = "http://localhost:3000/user";
   const [userData, setUserdata] = useState({
@@ -113,9 +114,7 @@ const Signup = () => {
 
         <p className="text-sm text-center text-gray-500 mt-4">
           Already have an account?{' '}
-          <a href="#" className="text-blue-600 hover:underline">
-            Log in
-          </a>
+          <Link to="/login" className="text-blue-600 hover:underline">login </Link>
         </p>
       </div>
     </div>

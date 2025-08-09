@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Nav = () => {
    
@@ -6,29 +7,30 @@ const Nav = () => {
    
    <>
 
-    <nav className="bg-blue-950 shadow-md">
+     
+     <nav className="bg-white shadow-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          {/* Logo */}
+          {/* Left: Logo */}
           <div className="flex-shrink-0">
-            <Link to="/" className="text-xl font-bold text-white">
+            <Link to="/" className="text-xl font-bold text-black">
               Electric Service
             </Link>
           </div>
 
-          {/* Desktop Menu */}
-          <div className="hidden md:flex space-x-6">
-            <Link to="/" className="text-gray-100 hover:text-blue-600">Home</Link>
-            <Link to="/services" className="text-gray-100 hover:text-blue-600">Services</Link>
-            <Link to="/carrior" className="text-gray-100 hover:text-blue-600">Carrior</Link>
-            <Link to="/login" className="text-gray-100 hover:text-blue-600">Login</Link>
+          {/* Center: Desktop Navigation */}
+          <div className="hidden md:flex space-x-6 absolute left-1/2 transform -translate-x-1/2">
+            <Link to="/" className="text-black hover:text-blue-600">Home</Link>
+            <Link to="/services" className="text-black hover:text-blue-600">Services</Link>
+            <Link to="/carrior" className="text-black hover:text-blue-600">Carrior</Link>
+            <Link to="/login" className="text-black hover:text-blue-600">Login</Link>
           </div>
 
-          {/* Mobile Menu Toggle */}
+          {/* Right: Mobile Menu Toggle */}
           <div className="md:hidden">
             <details className="relative">
               <summary className="list-none cursor-pointer">
-                <svg className="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" strokeWidth="2"
+                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" strokeWidth="2"
                   viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round"
                     d="M4 6h16M4 12h16M4 18h16" />
