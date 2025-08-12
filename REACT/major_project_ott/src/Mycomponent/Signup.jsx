@@ -3,6 +3,7 @@ import axios from 'axios'
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 
 
@@ -24,33 +25,28 @@ const Signup = () => {
 
   }
 
-    const [showdata , setShowdata] = useState([])
+    
 
   const signupdata =async (e)=>{
      e.preventDefault();
 
       try {
-       if(showdata.find((e)=>e.email ===userData.email)){
-        alert("Email already exists");
-        navigate('/signup');
-        
+         let res = await axios.get(API_URL)
+         let response =  res.data;
+       if(response.find((e)=>e.email ==userData.email)){
+     toast.info("email already exists" ,{
+       position: "top-center",
+       theme: "dark"
+     });
+        // navigate('/signup');
+        return;
        }
-
         await axios.post(API_URL,userData)
         
       } catch (error) {
         console.log(error)
       }
   }
-
-
-
-  const showuserdata = ()=>{
-
-    let res = axios.get(API_URL)
-  setShowdata(res.data)
-  }
-  
 
 
   return (
