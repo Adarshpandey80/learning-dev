@@ -19,7 +19,7 @@ function App() {
         <Navbar />
         <Routes>
           {/* Define your routes here */}
-          <Route path="/" element={<Home/>} />
+          <Route path="/home" element={<Home/>} />
           <Route path="/services" element={<Services/>} />
           <Route path="/carrior" element={<Carrior/>} />
           <Route path="/signup" element={<Signup/>} />

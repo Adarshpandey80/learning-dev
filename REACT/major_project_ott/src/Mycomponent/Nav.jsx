@@ -8,7 +8,7 @@ const Nav = () => {
    <>
 
      
-     <nav className="bg-white shadow-md">
+     <nav className="">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Left: Logo */}
@@ -20,7 +20,7 @@ const Nav = () => {
 
           {/* Center: Desktop Navigation */}
           <div className="hidden md:flex space-x-6 absolute left-1/2 transform -translate-x-1/2">
-            <Link to="/" className="text-black hover:text-blue-600">Home</Link>
+            <Link to="/home" className="text-black hover:text-blue-600">Home</Link>
             <Link to="/services" className="text-black hover:text-blue-600">Services</Link>
             <Link to="/carrior" className="text-black hover:text-blue-600">Carrior</Link>
             <Link to="/login" className="text-black hover:text-blue-600">Login</Link>

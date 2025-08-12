@@ -1,9 +1,59 @@
 import React from 'react'
 import { Link  } from 'react-router-dom';
 import { useState } from 'react';
+import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 const Login = () => {
+  const navigate = useNavigate();
+
+  const API_URL = "http://localhost:3000/user";
  
+  const [UserLogin,setuserLogin] = useState({
+    email:"",
+    password:"",
+  })
+
+  const handleChange =(e)=>{
+   const {name,value} = e.target;
+   setuserLogin((prev)=>({
+    ...prev, [name]: value
+
+   }))
+
+  }
+
+  const userlogin =async (e)=>{
+    e.preventDefault();
+    
+    try {
+       const res = await axios.get(API_URL);
+       const response = res.data;
+       
+       const user = await response.find((e) => e.email === UserLogin.email && e.password === UserLogin.password);
+        if (user) {
+          toast.success("Login successful", {
+            position: "top-center",
+            theme: "dark"
+          });
+          
+           navigate("/home");
+        } else {
+          toast.warning("Invalid email or password", {
+            position: "top-center",
+            theme: "dark"
+          });
+        }
+    } catch (error) {
+      //  toast.warning(" User not found", {
+      //       position: "top-center",
+      //       theme: "dark"
+      //     });
+      console.log(error)
+    }
+  
+  }
 
   return (
    <>
@@ -20,6 +70,9 @@ const Login = () => {
               type="email"
               id="email"
               autoComplete="email"
+              name="email"
+              value={UserLogin.email}
+              onChange={handleChange}
               required
               className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
             />
@@ -33,6 +86,9 @@ const Login = () => {
               type="password"
               id="password"
               autoComplete="current-password"
+              name="password"
+              value={UserLogin.password}
+              onChange={handleChange}
               required
               className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
             />
@@ -52,7 +108,7 @@ const Login = () => {
           </div>
 
           <button
-            type="submit"
+            type="submit" onClick={userlogin}
             className="w-full flex justify-center py-2 px-4 border border-transparent text-white bg-indigo-600 hover:bg-indigo-700 rounded-md shadow-sm font-medium"
           >
             Sign in
