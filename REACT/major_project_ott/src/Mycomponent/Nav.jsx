@@ -20,7 +20,7 @@ const Nav = () => {
 
           {/* Center: Desktop Navigation */}
           <div className="hidden md:flex space-x-6 absolute left-1/2 transform -translate-x-1/2">
-            <Link to="/home" className="text-black hover:text-blue-600">Home</Link>
+            <Link to="/" className="text-black hover:text-blue-600">Home</Link>
             <Link to="/services" className="text-black hover:text-blue-600">Services</Link>
             <Link to="/carrior" className="text-black hover:text-blue-600">Carrior</Link>
             <Link to="/login" className="text-black hover:text-blue-600">Login</Link>

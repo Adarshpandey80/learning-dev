@@ -28,23 +28,26 @@ const Login = () => {
     e.preventDefault();
     
     try {
-       const res = await axios.get(API_URL);
-       const response = res.data;
-       
-       const user = await response.find((e) => e.email === UserLogin.email && e.password === UserLogin.password);
-        if (user) {
-          toast.success("Login successful", {
-            position: "top-center",
-            theme: "dark"
-          });
-          
-           navigate("/home");
-        } else {
-          toast.warning("Invalid email or password", {
+       const res = await axios.get(API_URL ,{
+        params: {
+          email: UserLogin.email,
+          password: UserLogin.password
+        }
+       });
+       if(res.length == 1){
+        toast.success("Login Successful", {
+          position: "top-center",
+          theme: "dark"
+        });
+        navigate("/");
+       }
+        else{
+          toast.warning("Invalid Credentials", {
             position: "top-center",
             theme: "dark"
           });
         }
+      
     } catch (error) {
       //  toast.warning(" User not found", {
       //       position: "top-center",
