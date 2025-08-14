@@ -34,12 +34,13 @@ const Login = () => {
           password: UserLogin.password
         }
        });
-       if(res.length == 1){
+       if(res.data && res.data.length === 1){
+        
         toast.success("Login Successful", {
           position: "top-center",
           theme: "dark"
         });
-        navigate("/");
+        navigate("/dashboard", {state: res}); // Navigate to dashboard with user data
        }
         else{
           toast.warning("Invalid Credentials", {
@@ -49,10 +50,7 @@ const Login = () => {
         }
       
     } catch (error) {
-      //  toast.warning(" User not found", {
-      //       position: "top-center",
-      //       theme: "dark"
-      //     });
+  
       console.log(error)
     }
   

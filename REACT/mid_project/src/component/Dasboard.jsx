@@ -11,8 +11,7 @@ const Dasboard = () => {
     <h2>Neme : {formdata.namekey}</h2>
     <h2>Email : {formdata.email}</h2>
     <h2>Password : {formdata.password}</h2>
-    <div>
-        
+    <div>     
     </div>
     </>
   )

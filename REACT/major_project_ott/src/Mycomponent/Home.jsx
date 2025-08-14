@@ -1,11 +1,22 @@
 import React from 'react'
+import { useState } from 'react'
+import { useLocation } from 'react-router-dom'
 
 const Home = () => {
-
- 
+  const location = useLocation( '/Login.jsx' );
+  const formdata = location.state || {};
+  console.log("Form data from location state:", formdata);
 
   return (
     <>
+    <div>
+      <h1>name : {formdata.name}</h1>
+      <h1>Email : {formdata.email}</h1>
+      <h1>Password : {formdata.password}</h1>
+         
+
+
+    </div>
         <div className="bg-gradient-to-b from-[#0f172a] to-[#1e293b] text-white font-sans">
       {/* Hero Section */}
       <section className="text-center py-24 relative overflow-hidden">

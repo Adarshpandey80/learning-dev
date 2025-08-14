@@ -1,8 +1,7 @@
 import React from 'react'
 import axios from 'axios'
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 
 
@@ -34,17 +33,28 @@ const Signup = () => {
          let res = await axios.get(API_URL)
          let response =  res.data;
        if(response.find((e)=>e.email ==userData.email)){
-     toast.info("email already exists" ,{
-       position: "top-center",
-       theme: "dark"
-     });
-        // navigate('/signup');
-        return;
+         toast.info("email already exists" ,{
+           position: "top-center",
+           theme: "dark"
+         });
+         return;
        }
-        await axios.post(API_URL,userData)
+       
+       const signupResponse = await axios.post(API_URL,userData);
+       if(signupResponse.data) {
+         toast.success("Signup Successful", {
+           position: "top-center",
+           theme: "dark"
+         });
+         navigate("/", {state: userData});
+       }
         
       } catch (error) {
-        console.log(error)
+        console.log(error);
+        toast.error("Signup failed", {
+          position: "top-center",
+          theme: "dark"
+        });
       }
   }
 
