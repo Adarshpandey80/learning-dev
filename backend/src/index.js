@@ -1,6 +1,10 @@
 const express = require('express');
 const app = express();
 
+mongoose.connect(" connecting link")
+.then(()=>{
+    console.log("data connected")
+})
 
 app.get('/', (req, res) => {
     res.send('Hello World!');
