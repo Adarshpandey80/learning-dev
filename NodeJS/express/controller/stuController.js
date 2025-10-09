@@ -3,6 +3,15 @@
 const homePage = (req,res) =>{
     res.send("<h1>this is home page</h1>")
 }
+const aboutPage = (req,res) =>{
+    res.send("<h1>this is about page</h1>")
+}
+const feePage = (req,res) =>{
+    res.send("<h1>this is fee page</h1>")
+}
+const saleryPage = (req,res) =>{
+    res.send("<h1>this is salery page</h1>")
+}
 
 
 
@@ -10,5 +19,9 @@ const homePage = (req,res) =>{
 
 
 module.exports = {
-    homePage
+    homePage,
+    aboutPage,
+    feePage,
+    saleryPage
+
 }

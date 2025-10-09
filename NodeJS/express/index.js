@@ -1,10 +1,14 @@
 const express = require('express');
 const app = express();
 const stuRout = require('./router/studentRouter')
+const empRout = require("./router/employeeRouter")
+const teacherRoute = require("./router/teacherRoute")
 
 app.use('/student' , stuRout)
 
+app.use('/employee' ,empRout)
 
+app.use('/teacher' , teacherRoute)
 
 
 
