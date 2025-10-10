@@ -1,13 +1,14 @@
+const { home } = require("./teacherController")
 
 
 const homePage = (req,res) =>{
-    res.send("<h1>this is home page</h1>")
+    res.render("./student/home")
 }
 const aboutPage = (req,res) =>{
-    res.send("<h1>this is about page</h1>")
+    res.render("./student/about")
 }
 const feePage = (req,res) =>{
-    res.send("<h1>this is fee page</h1>")
+    res.render("./student/feePage")
 }
 const saleryPage = (req,res) =>{
     res.send("<h1>this is salery page</h1>")

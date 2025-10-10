@@ -4,6 +4,9 @@ const stuRout = require('./router/studentRouter')
 const empRout = require("./router/employeeRouter")
 const teacherRoute = require("./router/teacherRoute")
 
+
+app.set("view engine" , "ejs")
+
 app.use('/student' , stuRout)
 
 app.use('/employee' ,empRout)
