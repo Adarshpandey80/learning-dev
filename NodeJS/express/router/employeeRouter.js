@@ -4,8 +4,8 @@ const empController = require("../controller/empController")
 
 route.get("/name", empController.name)
 
-route.get('/id' , empController.id)
-route.get('/salery' , empController.salery)
+route.get('/compony' , empController.compony)
+
 route.get('/contact' , empController.contact)
 
 

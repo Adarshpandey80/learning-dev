@@ -9,9 +9,9 @@ route.get("/home", stucontroll.homePage)
 
 route.get("/about",stucontroll.aboutPage)
 
-route.get("/fee", stucontroll.feePage)
+route.get("/subject", stucontroll.subjectPage)
 
-route.get("/salery",stucontroll.saleryPage)
+route.get("/contact",stucontroll.contactPage)
 
 
 

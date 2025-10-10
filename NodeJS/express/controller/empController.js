@@ -1,21 +1,20 @@
 
 const name = (req,res)=>{
-    res.send("<h1>this is name route</h1>")
+    res.render("./employee/name")
 }
-const id = (req,res)=>{
-    res.send("<h1>this is employee id 12345</h1>")
+const compony = (req,res)=>{
+    res.render("./employee/compony")
 }
-const salery = (req,res)=>{
-    res.send("<h1>this is employee salery</h1>")
+const contact= (req,res)=>{
+    res.render("./employee/contact")
 }
-const contact = (req,res)=>{
-    res.send("<h1>this is employee contact</h1>")
-}
+
+
 
 
 module.exports = {
     name,
-    id,
-    salery,
+    compony,
+    
     contact
 }

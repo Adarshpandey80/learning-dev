@@ -7,11 +7,11 @@ const homePage = (req,res) =>{
 const aboutPage = (req,res) =>{
     res.render("./student/about")
 }
-const feePage = (req,res) =>{
-    res.render("./student/feePage")
+const subjectPage = (req,res) =>{
+    res.render("./student/subject")
 }
-const saleryPage = (req,res) =>{
-    res.send("<h1>this is salery page</h1>")
+const contactPage = (req,res) =>{
+    res.render("./student/contact")
 }
 
 
@@ -22,7 +22,7 @@ const saleryPage = (req,res) =>{
 module.exports = {
     homePage,
     aboutPage,
-    feePage,
-    saleryPage
+    subjectPage,
+    contactPage
 
 }
