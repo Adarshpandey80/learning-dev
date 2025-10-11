@@ -1,4 +1,4 @@
-const { home } = require("./teacherController")
+
 
 
 const homePage = (req,res) =>{
