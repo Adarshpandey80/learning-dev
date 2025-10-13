@@ -13,6 +13,7 @@ route.get("/subject", stucontroll.subjectPage)
 
 route.get("/contact",stucontroll.contactPage)
 
+route.post("/save", stucontroll.saveStudent)
 
 
 
