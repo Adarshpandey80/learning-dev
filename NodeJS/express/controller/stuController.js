@@ -1,5 +1,5 @@
 const Student = require("../models/stuModel")
-
+const mongoose = require("mongoose")
 
 const homePage = (req,res) =>{
     res.render("./student/home")
@@ -15,16 +15,21 @@ const contactPage = (req,res) =>{
 }
 
 const saveStudent = async (req,res) =>{
-     const {name , age , fee , phone} = req.body
+     const {name , city , fees , phone} = req.body
      console.log(req.body)
-
-       const student = mongoose.create({
-        name : name,
-        age : age,
-        fee : fee,
-        phone : phone
-       })
-        await student.save()
+        // const student = new Student({
+        //     name,
+        //     city,
+        //     fees,
+        //     phone
+        // })
+        // await student.save()
+        const student = await Student.create({
+            name : name, 
+            city : city,
+            fees: fees,
+            phone: phone
+        })
         res.redirect("/student/about")
      }
     
