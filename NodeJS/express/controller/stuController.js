@@ -15,7 +15,7 @@ const contactPage = (req,res) =>{
 }
 
 const saveStudent = async (req,res) =>{
-     const {name , city , fees , phone} = req.body
+    //  const {name , city , fees , phone} = req.body
      console.log(req.body)
         // const student = new Student({
         //     name,
@@ -24,12 +24,15 @@ const saveStudent = async (req,res) =>{
         //     phone
         // })
         // await student.save()
-        const student = await Student.create({
-            name : name, 
-            city : city,
-            fees: fees,
-            phone: phone
-        })
+        // const student = await Student.create({
+        //     name : name, 
+        //     city : city,
+        //     fees: fees,
+        //     phone: phone
+        // })
+
+        const newList = new Student(req.body.list);
+        await newList.save();
         res.redirect("/student/about")
      }
     
