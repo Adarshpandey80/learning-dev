@@ -6,7 +6,7 @@ const stuRout = require('./router/studentRouter')
 const empRout = require("./router/employeeRouter")
 const teacherRoute = require("./router/teacherRoute")
 
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({ extended: true  }));
 app.use(bodyParser.json());
 
 app.set("view engine", "ejs")

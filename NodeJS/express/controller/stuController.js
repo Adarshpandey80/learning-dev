@@ -10,8 +10,9 @@ const aboutPage = (req,res) =>{
 const subjectPage = (req,res) =>{
     res.render("./student/subject")
 }
-const contactPage = (req,res) =>{
-    res.render("./student/contact")
+const contactPage = async (req,res) =>{
+    const stuData = await Student.find()
+    res.render("./student/contact" ,{Data:stuData});
 }
 
 const saveStudent = async (req,res) =>{

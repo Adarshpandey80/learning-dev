@@ -9,12 +9,30 @@
 
         <h1>welcome to contact page</h1>
     
-        <a href="/student/home">home</a>
+     <a href="/student/home">home</a>
      <a href="/student/about">About</a>
      <a href="/student/subject">subject</a>
      <a href="/student/contact">contact</a>
 
      <hr font-size="5px" color="black">
-    
+        
+     <table bgcolor="pink" align="center" width="600" border="1px solid black">
+        <tr  >
+            <th>Name</th>
+            <th>City</th>
+            <th>fees</th>
+            <th>phone</th>
+        </tr>
+         
+        <% Data.map((key)=>{
+            %>
+            <tr align="center" >
+                 <td> <%=key.name %></td>
+                 <td> <%=key.city %></td>
+                 <td> <%=key.fees %></td>
+                 <td> <%=key.phone %></td>
+            </tr>
+       <% }) %>
+     </table>
 </body>
 </html>
