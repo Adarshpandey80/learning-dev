@@ -12,6 +12,7 @@
      <a href="/student/home">home</a>
      <a href="/student/about">About</a>
      <a href="/student/subject">subject</a>
+    <a href="/student/joinUs">joinUs</a>
      <a href="/student/contact">contact</a>
 
      <hr font-size="5px" color="black">
@@ -22,6 +23,7 @@
             <th>City</th>
             <th>fees</th>
             <th>phone</th>
+            
         </tr>
          
         <% Data.map((key)=>{
@@ -31,6 +33,7 @@
                  <td> <%=key.city %></td>
                  <td> <%=key.fees %></td>
                  <td> <%=key.phone %></td>
+                 <td><a href="/student/EditForm">Edit</a> / <a href="/student/delete?id=<%=key._id%>">Delete</a></td>
             </tr>
        <% }) %>
      </table>

@@ -10,6 +10,9 @@ const aboutPage = (req,res) =>{
 const subjectPage = (req,res) =>{
     res.render("./student/subject")
 }
+const joinPage = (req,res) =>{
+    res.render("./student/joinUs")
+}
 const contactPage = async (req,res) =>{
     const stuData = await Student.find()
     res.render("./student/contact" ,{Data:stuData});
@@ -39,8 +42,24 @@ const saveStudent = async (req,res) =>{
     
     
 
+  const deleteStudent = async (req, res) => {
+    const {id} = req.query;
+    const del = await Student.findByIdAndDelete(id);
+    const studata = await Student.find();
+    res.render("./student/contact", {Data: studata});
+  }
 
-
+const editStudentForm = async (req ,res)=>{
+    const studata = await Student.find();
+    res.render("./student/editForm" , {Data:studata});
+}
+ 
+  const editStudent = async (req ,res)=>{
+    const {id} = req.query;
+    const edit = await Student.findOneAndUpdate(id);
+    const studata = await Student.find();
+    res.render("./student/contact" , {Data:studata});
+  }
 
 
 
@@ -48,7 +67,11 @@ module.exports = {
     homePage,
     aboutPage,
     subjectPage,
+    joinPage,
     contactPage,
-    saveStudent
+    saveStudent,
+   deleteStudent,
+   editStudentForm,
+   editStudent
 
 }
