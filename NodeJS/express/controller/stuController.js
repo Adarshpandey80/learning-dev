@@ -57,16 +57,15 @@ const saveStudent = async (req,res) =>{
 const editStudentForm = async (req ,res)=>{
     const {id} = req.params;
     const studata = await Student.findById(id);
-    
     res.render("./student/editForm" , {studata} );
 }
  
   const editStudentData = async (req ,res)=>{
-    const {id} = req.params;
-    const edit = await Student.findByIdAndUpdate(id);
-    console.log(edit)
-    const studata = await Student.find();
-    res.render("./student/contact" , {Data:studata});
+   const {id} =req.params;
+   const newData = req.body.list;
+   const update = await Student.findByIdAndUpdate(id, newData);
+   const studata = await Student.find();
+   res.render("./student/contact" , {Data:studata} )
   }
 
   const searchPage = async (req,res) =>{
