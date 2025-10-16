@@ -1,4 +1,4 @@
-const Student = require("../models/stuModel")
+  const Student = require("../models/stuModel")
 const mongoose = require("mongoose")
 
 const homePage = (req,res) =>{
@@ -16,6 +16,11 @@ const joinPage = (req,res) =>{
 const contactPage = async (req,res) =>{
     const stuData = await Student.find()
     res.render("./student/contact" ,{Data:stuData});
+}
+
+const infoPage = async (req,res) =>{
+
+  res.render("./student/infostu", {Data: []});
 }
 
 const saveStudent = async (req,res) =>{
@@ -50,17 +55,26 @@ const saveStudent = async (req,res) =>{
   }
 
 const editStudentForm = async (req ,res)=>{
-    const studata = await Student.find();
-    res.render("./student/editForm" , {Data:studata});
+    const {id} = req.params;
+    const studata = await Student.findById(id);
+    
+    res.render("./student/editForm" , {studata} );
 }
  
-  const editStudent = async (req ,res)=>{
-    const {id} = req.query;
-    const edit = await Student.findOneAndUpdate(id);
+  const editStudentData = async (req ,res)=>{
+    const {id} = req.params;
+    const edit = await Student.findByIdAndUpdate(id);
+    console.log(edit)
     const studata = await Student.find();
     res.render("./student/contact" , {Data:studata});
   }
 
+  const searchPage = async (req,res) =>{
+    const {fee} = req.body;
+    const student1 = await Student.find({fees:fee})
+    console.log(student1)
+    res.render("./student/infostu", {Data:student1})
+  }
 
 
 module.exports = {
@@ -72,6 +86,9 @@ module.exports = {
     saveStudent,
    deleteStudent,
    editStudentForm,
-   editStudent
+   editStudentData,
+   infoPage,
+   searchPage
+   
 
 }

@@ -17,11 +17,14 @@ route.get("/contact",stucontroll.contactPage)
 route.post("/save", stucontroll.saveStudent)
 
 route.get("/delete" ,stucontroll.deleteStudent)
-route.get("/EditForm" , stucontroll.editStudentForm)
 
+route.get("/:id/editForm" , stucontroll.editStudentForm)
 
+route.post("/:id/editData" , stucontroll.editStudentData)
 
+route.get("/infostu" , stucontroll.infoPage)
 
+route.post("/editstu" , stucontroll.searchPage)
 
 
 module.exports = route

@@ -5,20 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
-
-        <h1>welcome to contact page</h1>
-    
+<body bgcolor="yellow">
+        
+        
      <a href="/student/home">home</a>
      <a href="/student/about">About</a>
      <a href="/student/subject">subject</a>
-    <a href="/student/joinUs">joinUs</a>
+     <a href="/student/joinUs">joinUs</a>
      <a href="/student/contact">contact</a>
-       <a href="/student/infostu">info</a>
+     <a href="/student/infostu">info</a>
 
+     <h1>Student info page</h1>
+      <form action="/student/editstu" method="post">
+        info serach box : <input type="text" name="fee">
+        <button>Serch!!</button>
+      </form>
+       
      <hr font-size="5px" color="black">
-        
-     <table bgcolor="pink" align="center" width="600" border="1px solid black">
+    
+       <table bgcolor="pink" align="center" width="600" border="1px solid black">
         <tr  >
             <th>Name</th>
             <th>City</th>
@@ -27,16 +32,18 @@
             
         </tr>
          
-        <% Data.map((key)=>{
+        <% Data.forEach((key)=>{
             %>
             <tr align="center" >
                  <td> <%=key.name %></td>
                  <td> <%=key.city %></td>
                  <td> <%=key.fees %></td>
                  <td> <%=key.phone %></td>
-                 <td><a href="/student/<%=key._id%>/editForm">Edit</a> / <a href="/student/delete?id=<%=key._id%>">Delete</a></td>
+                 
             </tr>
        <% }) %>
      </table> 
+
+       
 </body>
 </html>

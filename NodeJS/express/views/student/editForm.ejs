@@ -6,13 +6,21 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Edit form</h1>
-         <form action="/student/save" method="post">
-        Enter name: <input type="text" name="<%=Data.name%>"> <br>
-        Enter city: <input type="text" name="list[city]"> <br>
-        Enter fees: <input type="number" name="list[fees]"> <br>
-        Enter phone: <input type="number" name="list[phone]"> <br>
-        <button>save!!</button>
+    
+       <a href="/student/home">home</a>
+     <a href="/student/about">About</a>
+     <a href="/student/subject">subject</a>
+    <a href="/student/joinUs">joinUs</a>
+     <a href="/student/contact">contact</a>
+       <a href="/student/infostu">info</a>
+
+     <h1>Edit form</h1>
+         <form action="/student/<%=studata._id%>/editData" method="post">
+        Enter name: <input type="text" name="list[name]" value="<%= studata.name%>"> <br>
+        Enter city: <input type="text" name="list[city]"  value="<%= studata.city%>"> <br>
+        Enter fees: <input type="number" name="list[fees]"  value="<%= studata.fees%>"> <br>
+        Enter phone: <input type="number" name="list[phone]"  value="<%= studata.phone%>"> <br>
+        <button>EditData</button>
      </form>
 </body>
 </html>
