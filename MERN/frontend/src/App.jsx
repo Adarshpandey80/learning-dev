@@ -1,25 +1,29 @@
 import { useState } from 'react'
-
-import axios from 'axios'
+import { BrowserRouter as Router, Routes, Route} from 'react-router-dom'
+import Home from './components/home'
+import Display from './components/Display'
+import Layout from './Layout'
+import Search from './components/Search'
+import Update from './components/Update'
+import Insert from './components/insert'
 
 function App() {
- const handlachange = async ()=>{
-  const api = "http://localhost:8000/home";
-  const response = await  axios.get(api);
-  console.log(response.data);
- }
 
- const handlchange1  = async ()=>{
-  const api = "http://localhost:8000/about";
-  const response = await axios.post(api , {name: "adarsh" , age: 22});
-  console.log(response.data);
- }
 
   return (
     <>
-      <h1>main component</h1>
-      <button onClick={handlachange}>Click!!</button>
-      <button onClick={handlchange1}>about!!</button>
+      <Router>
+          <Layout/>
+        <Routes>
+          <Route path="/" element={<Layout/>} />
+          <Route index element={<Home/>} />
+          <Route path="/display" element={<Display/>} />
+          <Route path="/insert" element={<Insert/>} />
+          <Route path="/search" element={<Search/>} />
+          <Route path="/update" element={<Update/>} />
+        </Routes>
+
+      </Router>
     </>
   )
 }
