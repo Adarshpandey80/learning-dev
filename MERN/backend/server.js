@@ -2,21 +2,17 @@ const express = require("express");
 const app = express();
 const cors = require("cors");
 const bodyParser = require('body-parser');
+const stuRoutes= require('./routes/stuRoutes');
+
+
 
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-app.get("/home" ,(req,res)=>{
-    res.send("Hello from backend");
-})
+app.use("/student" , stuRoutes);
 
-app.post("/about", (req,res)=>{
-    const {name , age} = req.body;
-    console.log(name);
-    console.log(age);
-    res.send("This is about page");
-})
+
 
 
 app.listen(8000,()=>{
