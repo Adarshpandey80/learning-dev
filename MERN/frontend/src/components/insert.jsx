@@ -22,8 +22,7 @@ const Insert = () => {
         e.preventDefault();
         const api = "http://localhost:8000/student/home"
         const response = await axios.post(api, studata)
-        console.log(response.data)
-       console.log(studata)
+        alert(response.data)
     }
 
 

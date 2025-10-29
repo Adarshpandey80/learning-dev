@@ -18,7 +18,7 @@ const home = (req,res) =>{
     }).catch((err)=>{
         console.log("error while inserting data" , err);
     })
-
+   res.send("data inserted successfully");
 }
 
 
@@ -27,14 +27,34 @@ const getinfo =  async(req,res)=>{
     res.send(studentData)
 }
 
-const  editdata = (req,res)=>{
-    // const id = req.body.id;
-    console.log(req.body)
-    res.send("edit data route is working")
+const  editdata = async (req,res)=>{
+    const id =  req.params.id;
+    const studata = await stuschema.findById(id);
+    console.log(studata);
+    res.send(studata);
 }
+const updatedata = async (req,res)=>{
+    const data = req.body;
+    const {id} = req.params;
+    console.log(data)
+    const updatedata = await stuschema.findByIdAndUpdate(id , data );
+    res.send(updatedata);
+}
+  
+const deletedata = async(req,res)=>{
+    const id = req.params.id;
+    console.log(id);
+    const deletedata = await stuschema.findByIdAndDelete(id);
+    const studentData = await stuschema.find();
+    res.send(studentData);
+}
+
+
 
 module.exports = {
     home,
     getinfo,
-    editdata
+    editdata,
+    updatedata,
+    deletedata
 }

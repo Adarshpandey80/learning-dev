@@ -1,9 +1,11 @@
 import React from 'react'
 import { useState } from 'react'
 import { useEffect } from 'react';
+
 import axios from "axios"
 import { Link } from 'react-router-dom';
 const Display = () => {
+
   const [stuData, setstuData] = useState([]);
   const [loading , setloading] = useState(true)
 
@@ -13,13 +15,19 @@ const Display = () => {
       const response =  axios.get(api);
       response.then((res)=>{
         setstuData(res.data);
-        console.log(res.data)
         setloading(false)
       }).catch((err)=>{
         console.log("data fetch susscesfull")
       })
       
   },[])
+
+   const deletedata = async (id) =>{
+    const api = `http://localhost:8000/student/delete/${id}`;
+    const response = await axios.delete(api);
+    alert("data deleted successfully")
+     setstuData(response.data);
+   }
   return (
     <>
       <h1>This is Display Component</h1>
@@ -50,7 +58,7 @@ const Display = () => {
                       <td>{e.location}</td>
                       <td>{e.inrollsub}</td>
                       <td>{e.sturoll}</td>
-                      <td> <Link to={`/update/${e._id}`}>Edit</Link> <Link><button>delete</button></Link></td>
+                      <td> <Link to={`/update/${e._id}`}>Edit</Link> <Link><button onClick={()=>deletedata(e._id)}>delete</button></Link></td>
                     </tr>
                   )
                   )
