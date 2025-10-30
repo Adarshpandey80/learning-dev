@@ -49,12 +49,19 @@ const deletedata = async(req,res)=>{
     res.send(studentData);
 }
 
-
+const searchdata = async (req,res)=>{
+    const {id} = req.body;
+    
+    const data = await stuschema.findOne({id});
+    console.log(data);
+    res.send(data);
+}
 
 module.exports = {
     home,
     getinfo,
     editdata,
     updatedata,
-    deletedata
+    deletedata,
+    searchdata
 }
