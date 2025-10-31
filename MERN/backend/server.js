@@ -4,6 +4,7 @@ const cors = require("cors");
 const bodyParser = require('body-parser');
 const stuRoutes= require('./routes/stuRoutes');
 const mongoose = require("mongoose")
+require("dotenv").config();
 
 
 app.use(cors());
@@ -12,7 +13,7 @@ app.use(bodyParser.json());
 
 app.use("/student" , stuRoutes);
 
-mongoose.connect('mongodb://127.0.0.1:27017/collStudent').then(()=>{
+mongoose.connect(process.env.DBCONN).then(()=>{
     console.log("database connection successfully")
 }).catch((err)=>{
      console.log("data base connection error" , err);
@@ -20,7 +21,7 @@ mongoose.connect('mongodb://127.0.0.1:27017/collStudent').then(()=>{
    
 
 
-
-app.listen(8000,()=>{
-    console.log("Server is running on port 8000");
+const port = process.env.PORT ;
+app.listen(port,()=>{
+    console.log(`server is running on port ${port}`);
 })

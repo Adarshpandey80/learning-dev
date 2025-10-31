@@ -1,2 +1,0 @@
-- [x] Fix backend searchdata function in stuController.js: Make async, await findOne, handle not found and errors.
-- [x] Update frontend Search.jsx: Add try-catch in searchData, set state with response.data, display searchdata in UI.
