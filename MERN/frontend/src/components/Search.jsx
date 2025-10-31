@@ -11,7 +11,7 @@ const Search = () => {
 
 
    const searchData = async()=>{
-     const api = "http://localhost:8000/student/searchdata";
+     const api = `${import.meta.env.VITE_API_URL}/student/search`;
       const response = await axios.post(api , {id:query});
       console.log(response.data)
       setSearchdata(response.data);

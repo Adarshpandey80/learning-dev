@@ -20,7 +20,7 @@ const Insert = () => {
 
     const handlesubmit = async (e) => {
         e.preventDefault();
-        const api = "http://localhost:8000/student/home"
+        const api = `${import.meta.env.VITE_API_URL}/student/insert`;
         const response = await axios.post(api, studata)
         alert(response.data)
     }

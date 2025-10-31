@@ -11,7 +11,7 @@ const Display = () => {
 
 
   useEffect(() => {
-      const api = "http://localhost:8000/student/stuinfo"
+      const api = `${import.meta.env.VITE_API_URL}/student/getall`;
       const response =  axios.get(api);
       response.then((res)=>{
         setstuData(res.data);
@@ -23,7 +23,7 @@ const Display = () => {
   },[])
 
    const deletedata = async (id) =>{
-    const api = `http://localhost:8000/student/delete/${id}`;
+    const api = `${import.meta.env.VITE_API_URL}/student/delete/${id}`;
     const response = await axios.delete(api);
     alert("data deleted successfully")
      setstuData(response.data);

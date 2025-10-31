@@ -28,7 +28,7 @@ const Update = () => {
 
    const fatchdata =  async()=>{
     try {
-       const api = `http://localhost:8000/student/editdata/${id}`;
+       const api = `${import.meta.env.VITE_API_URL}/student/get/${id}`;
         const response = await axios.get(api)
         console.log(response.data)
           setUpdata(response.data);
@@ -40,7 +40,7 @@ const Update = () => {
 
    const handlsubmit = async (e)=>{
     e.preventDefault();
-    const api = `http://localhost:8000/student/update/${id}`
+    const api = `${import.meta.env.VITE_API_URL}/student/update/${id}`;
     try {
         const response = await axios.put(api , upData)
         alert("data updated successfully")
