@@ -51,7 +51,6 @@ const deletedata = async(req,res)=>{
 
 const searchdata = async (req,res)=>{
     const {id} = req.body;
-    
     const data = await stuschema.find({id:id});
     console.log(data);
     res.send(data);

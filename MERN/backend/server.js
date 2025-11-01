@@ -20,6 +20,30 @@ mongoose.connect(process.env.DBCONN).then(()=>{
 })
    
 
+app.use((req,res,next)=>{
+    console.log("This is app level Middleware")
+    next();
+})
+
+app.get("/home" , (req,res)=>{
+    res.send("This is Home Route");
+})
+
+
+app.get("/service" , (req,res,next)=>{
+    console.log("Frist Service level middleware");
+    next();
+}, (req,res,next)=>{
+    console.log("SEcond service level middleware");
+    next();
+} , (req,res,next)=>{
+    console.log("Third service level middleware");
+    next();
+},  (req,res)=>{
+    res.send("This is Home Route");
+})
+
+
 
 const port = process.env.PORT ;
 app.listen(port,()=>{
