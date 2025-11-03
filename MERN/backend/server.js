@@ -26,24 +26,24 @@ app.use((req,res,next)=>{
 })
 
 app.get("/home" , (req,res)=>{
+     throw new Error("This is custom error from home route");
     res.send("This is Home Route");
 })
 
 
-app.get("/service" , (req,res,next)=>{
-    console.log("Frist Service level middleware");
-    next();
-}, (req,res,next)=>{
-    console.log("SEcond service level middleware");
-    next();
-} , (req,res,next)=>{
-    console.log("Third service level middleware");
-    next();
-},  (req,res)=>{
-    res.send("This is Home Route");
+app.get("/service" , (req,res)=>{
+    const name = false;
+    if(name){
+        res.send("This is service route");
+    }else{
+        res.status(200).send("Something went wrong in service route");
+    }
 })
 
-
+app.use((err,req,res,next)=>{
+    console.error(err.stack);
+    res.status(500).send("Something broke!");
+})
 
 const port = process.env.PORT ;
 app.listen(port,()=>{

@@ -3,18 +3,25 @@ import axios from 'axios'
 const Home = () => {
  
   const handlsubmit = async()=>{
-    const api =  `${import.meta.env.VITE_API_URL}/home`;
+ 
+    try {
+       const api =  `${import.meta.env.VITE_API_URL}/home`;
     const response = await axios.get(api);
     console.log(response);
+    } catch (error) {
+      alert(error.response.data);
+    }
   }
   const handlsubmit1 = async()=>{
-    const api =  `${import.meta.env.VITE_API_URL}/service`;
+  
+    try {
+        const api =  `${import.meta.env.VITE_API_URL}/service`;
     const response = await axios.get(api);
     console.log(response);
+    } catch (error) {
+      alert(error.response.data);
+    }
   }
-
-
-
 
   return (
   <>
