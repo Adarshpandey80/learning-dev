@@ -3,6 +3,7 @@ import Layout from "./Layout";
 import Home from "./pages/home";
 import Registration from "./pages/Registration";
 import Login from "./pages/Login";
+import Dashboard from "./pages/dashboard";
 const App=()=>{
   return(
     <>
@@ -13,6 +14,11 @@ const App=()=>{
           <Route path="home" element={<Home/>} /> 
           <Route path="registration" element={<Registration/>}/>   
           <Route path="login" element={<Login/>}/>
+          </Route>
+         </Routes>
+
+         <Routes>
+          <Route path="dashboard" element={<Dashboard/>}>
           </Route>
          </Routes>
        </BrowserRouter>
