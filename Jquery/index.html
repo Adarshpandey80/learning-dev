@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery.js"></script>
+    <style>
+        #demo{
+            width: 400px;
+            height: 400px;
+            background-color: rgb(200, 177, 177);
+        }
+    </style>
+    <script>
+        $(document).ready(function(){
+            $("#btn1").click(function(){
+                $("h1").hide(3000);
+            });
+            $("#btn2").click(function(){
+                $("h1").show(3000);
+            });
+            $("p").click(function(){
+                $(this).hide(2000);
+            })
+            $("input").focus(function(){
+                $(this).css("background-color","blue");
+            })
+            $("input").blur(function(){
+                $(this).css("background-color","white");
+            })
+            $("#divbtn").click(function(){
+                $("#demo").toggle(3000);
+            })
+            $("#divbtn").click(function(){
+                $("#demo").slideUp(3000);
+            })
+            $("img").click(function(){
+                $(this).slideToggle(3000);
+            })
+            $("#blackdiv").click(function(){
+                var div = $("#div");
+                div.animate({ height: '300px', width: '300px', opacity: '0.4' }, "slow");
+                div.animate({ width: '100px', width: '100px', opacity: '0.8' } , "slow");
+                div.animate({ height: '100px', width: '100px', opacity: '0.4' } , "slow");
+                div.animate({ width: '100px', width: '100px', opacity: '0.8' } , "slow");
+
+            })
+        });
+    </script>
+</head>
+<body>
+ <h1>welcome to the cybrom</h1>
+ <p>welcome to the  cybrom</p>
+ <p>welcome to the cybrom</p>
+ <p>welcome to the cybrom</p>
+ <p>welcome to the cybrom</p>
+ <button id="btn1">hide</button>
+ <button id="btn2">show</button> <br>
+
+ enter name : <input type="text"> <br>
+ enter name : <input type="text"> <br>
+ enter name : <input type="text"> <br>
+ enter name : <input type="text">
+    
+
+   <div id="demo">
+
+   </div>
+   <button id="divbtn"> toggle</button>
+   <button id="divsideup"> slideup</button>
+   <button id="divsidedown"> slidedown</button> 
+    <!-- for this we need to hide the div first -->
+   <button id="divbt"> slideToggle</button>
+   <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAJQA0gMBIgACEQEDEQH/xAAbAAACAwEBAQAAAAAAAAAAAAAEBQIDBgABB//EADwQAAIBAwIDBQUHAwMEAwAAAAECAwAEERIhBTFBEyJRYXEUMoGRoSNCUrHB0fAGFeEzYvFjcoKSJCVD/8QAGgEAAwEBAQEAAAAAAAAAAAAAAgMEAQAFBv/EACgRAAMAAQMFAQACAQUAAAAAAAABAgMRITEEEhNBURQiMkIFQ1Jxgf/aAAwDAQACEQMRAD8AXSXIlIUKAvIBRviuFhE+phOV8MjO9WCxgVwF7RgfA5ok22AoSdxg8mHKkN9v9SzTv/vuLZrGWNSxKsB1Xf8A4qEeF7pUY8DTaOzXUS1xGT0yPeolEhzom0EHOCelF+jRb7g/mWuq2M/2TMCEQ58BXqAgYK5HWnz8OslK/buXPPQdq8XgqmEvFPhtWAG5H41j6uUtzV0jb1T3EvZK3u5U1YsZC/aDfzpjNYGBAZUkSQnnpyuK5LK5YKdPaKdwU32o11E0tdQPz0nwK+wd8hdOPCqWtZA3u1o4YYrcEywIzDo1cZYHhX/42Dv7ppddRkT2WwyOmxfdxPZ2glUjuqc/eohbHYgb9aMMRk7yx/A1dbM0R78ZYeBFA8jrcb2TK00EtzYyJju4zQ0kenC43rVSrBcriTUpoZ7RE30hgORrPNS2ZqxS90zN+y698GpeykHYGtOtvAQM4B61bHZQNnrQPqWvQ5YJaMn7KxGRXeyMu5rV+wIoPhQE1p3sEbVq6lMz8+hm5Y8GoAaae3HDttWk4oGS0wcYp+POmIy9OwEYPMVZnuYCVb2BU8q8IxVM5URZMDXIPKvdFBupJ2o9xk1U1uzbit7gFAMIMDJNVSJpOBR4hYCqZIM86zULtaQvI3rqJ9m866t1B0NXHE3MsNuVGwtp05UZ/EBQkZcEb0VHM2RkAkeVLvGxePqEg6NY3ABjUnc7DnUhYIe8YwB1wKrhuCvJQPQUZBeMvQfHNSViv0ehHUw+WU+xq2w5D/bmvH4ey4MEihuoJIzTJLsNjtF9MUWjwllOee3PlU9LIvRTN42tmIXju0GJCNPzodjIj+6pHToRWpcW0gCyA4qDWQYfYSal/A24+VK7qlbyMTmuGZZzlvtIWO23ezmrh2booWNVI2GByp+LNFOJbbcdVOAfhVD2FuThdS+JxRrqVw0B4faAIu0VfeVvhUHUlu8NvXlTAcMVRkZI6EdahJbOmCrLjwNFOWGznNpaC1ygJUN9Ki+3dDDApg0aau/HknoMVRNw/tGLRyBc9GUjFOWWfYp436AQAW33HrRcMgRtlOMcq6Lh0oOxU58GFFQ8PkGCSv8A4negu4YcqkeCdWXKoRjmTQsrxnLY38KYNbOGAwcdQ1VSWkbjZgDU/dKZRLegvjaInDbZr2SxVt1xv5V7LZlWyOVQ1yIcEGsa9yw1X0oew8vpQtzw44yFprrbO+9WDU6klaZF2gbmaRnDY6dyARU1gTTjGKbNAp60M8IU1bGbUhvDvqL3hXFBXEca76t/DFNJ1AXkaV3EfPemzQm40AjjJrqkU3rqPUXoadY81ckdTjTNELF5V3lIPCytI6vRSKmkVXIh8Kx5EasTR5HRMdRVPEVeiD0pbaY6e5E0TO9XxKwOQSDVSpREYpVD5bLkkcDBwfKpMkMq4kjK+Y2rxakKmvHLKoyURFki+5uPHNQks9Q5DPnsaJQ6TV4IYbipbw/GPWZiS5tGCjCn5VQkLlRpYjf3R1rRsPDeo9mh3KAHxAoZq4CdqhSlr3Bv3jz2rx7R1A0nNNxHj721cQnIGj8j9g/9CtYHwNafEGvJLMsCw3FNhErDlmvViVeS1zyz7B1euwgayJ2xmqZOHk+8taUgD7tUyAH7opbywuBiujNiw332FXf25OyzqpsyD8AqJU9FFcuqlG0qYjlse5zpZcWzqcKtamSJz0GKGe0Yn3a5dZIXYzKPbuwIbagJ+HnGSCa2UljIdlGKDm4XKR7uaYutWpzwJmONnvyHzr2tGeESZPdPyrqZ+1AfmRRFo+6xBouJtJ97NK47uEHZqvW9jzzq2kydRI2WYDoKkLkfgY0tW+jP4vnVntieJx4Zpb1CWORtHJr6Yq8DPWk8V4gO350Wl4vp60DqkF4ZGSJ51cgHU0BHdKeRHzomOaM/80p5KR3hQWpRd6tWVRyoVJYc7kfCqJeM8PgYqWLsOib0qslB+JIZmU/dXNcGkbkKRSf1ImcW8QXzbeq14y5bU0u/Q5pVVQSg0mZvH5VwEmd9VD2XHI5EAkXUfxKdqYR31s4yWC+tL1TBfcvRBI2PMGiY7cHpXq3dt0lT50RHPEdwQfSimJ9sTVV8PYrfHSrPZfIVZFOp8qv1jyq/Fhw2uSartMAe18qpNp5UxkkQblgKEkv4EzlwfSkZcOGXyHF36B/Y/KvfYl8BVbcatA+CzDzxRFve29yCYZkcjoDvSljwvhjHWRFfsSeArjZJ4URrFeFxR+PGjO+wY2kYqpraPwzRTMKrYjFC4n0MVUC+zQ/hrqvyK6h7EH3M+ABhnJPzqwXCDbNLixPMmvM19H2Hm+UbrdqOp+dWC9TwJ8qTdpiu7fFA8YazDv29+SKB61xvZfvSsPjSX2l+Q2HjXBifvE5pbxoNZKHacQdDkTN8TVw49OmwkJpAKmHRPeNLqJDV0O34zdzjS00mk+dQS6k/FScXQB7m9XJcZ+6RSHMjlTHKTsebsfjRUUopKs56CrUnbq+BSLSHTRoYp3X3SR6UVHdKN3c5+dZ2GQnqaMiepLSGqjQx3+2Ao9aLgvHzuxHkDWeilxRKXOCKmqA00zUwX5Vcs5olOKOo2kNZdbkEe/8ACpG88DSux67HOZfo0E/Embm2TQU17q97NK/aWPMj5V4023eA+Fcp+naJcBEl0h2ziqWl3DI5yORBwRQrGSQ4ETBfHUKklu6sG1MB4Y/emd0Tyc9w6HjvELcjExkUfdfemUH9WQkAXKPG3Ugah+9ZyaPs2GZ8f7FXJ/eqZxChJ7o6sCcn5UazT6A8aZuIeP2U2yToSeQzg/I1YeLWZbT7VCG8CwFfK+JXkKKUZpACd9C4PzpUb21c9mpdB4Ac/WnzNUtUA5hH2I8e4aCQb23yP+qK9r46eI26HTquRjbAkH7V1H4bB7oBTbQnLCb6VyWJlUdnIoOfvelUCC/hSOIDWD72D3SfL5E1GOG5eBe/pOrqeY8atXUZlxZ5v8HzJNuHzqxUgMQcbVE2si+9Gw+FGW90bZ2Yyayhxk7k5x/n6Ud/cZwQyouw6DcgkdK59dmnlamqMb9iF2SM9/OfCpJcJuCjetaW6KNOBcWavG3usF338ag3ArS6AkgnVQwHcI3oV/qKf91oMWH4ZoyyuwwSF868fJPebJrRyf0rOoBiliOB1zv0qib+mbxBqBjbyU86xddgr/I3xUvQkRSxwKKTCYHvN0FMof6evnXPZhBjOWNEwf0zeHc9nqxyLUF9Vh90GpsVx5JziiExnffypp/Ypo2CdpGHK8tz+m1S/sV3kDsgM9dWwpL6nF9GKaAoziioizCi7bgVwrHWFIIxnVsKZwcJ05D6RnqTU2Tqcf0ZMv2K1yMAnc1cqytyXu+Jpp/bnBADwKccyN6kOHou7Tu+2dOeVTvqZHLb2LlR13KMf/E1YC/PSQBvkjamcVtCJNIglY7d4kEVNoI/fkVT4a2zp+ApT6lG6oXRBpcNq29MfnRcVsTuQxHgF/U0tvuM+yOUWJRk9AA3r6UJD/UEqSOxfWpGCAaLsy2tUD3pGkEWgklQvocmhri4WLCmKRzg4wvOl8vHyq6Vj3658KlBxhXwdCRnPvnntSlhyc0gfNP0ovbq9jkHs9sApHfynPzoGe+4nKuhYHUMB39H0ph/eI5NR1KVXZWY7t/iuk4wxlDdpGsCLgaRkneqY7l/gC8k/RDLwXiU+XmOqQttqOf5moj+mpFX7RlLg4znrRnEeLuVKwSv39kC7k/tSd+JGOAorkYTVsSSW86sxvPS+Cm4T+h5/puDP+qn/vXUg/uPEemCPWup/iz/APIHy4/gL/c5hJ9rqCqSDhgdJ8KuE8sqnDK2jOMMd/LH+aXLll0vLhhtqjPePnRMNnNoRoF1q6d4Ee8dTZ8zyzVjiEeZqyQleaPQgIbJyAPp8aecBsrq6dFCqm2d99SjIz6gkfOltpw6YSW9wluNJPeY7BTuK1dvNJqIgiESjAznAPTn8T/OUvUWlOkhY6SYxg4c4UpK2rB2XHTmdz8Kpn4KXYP2x7Yd5cDzOPQVGOO5muoikwxp1NnOCy9Py+tOmFx2RKrGTgaM+J/grxbu4a3L4ruQog4q8MiQABsFsse8dqaW15FIyxzKCW5aeQoC7s0eExiT7RgMNk4zv18P2qm0sNEhEczhiBg7YztjfwGx+dZUY6XxmqqTHzWcMu4LDwwelVRwRsMASxad9TNsaChnktmbvlwqjcD3gTzFWG5juS0cykFTpbfA9P1pCil72Dd+w5bRMaluQ42Azy9anJw+bA0y93GSRttQc0AUNLAxII2QnC0JMOKEsnbqje6cZIFdMN7qjPIHiK4CNq6Yx4mhhb3Erh57lVXOyg7AdfXpS03bxK7NLIwjYrI2cb5Gcb0vCXV7MZmLELnvdFAB/eqowPltGeXTgbdksKjtbqQsGAdtW2aZvfWdvCC8mrYFcfeNZud5orZhMGRDk4I5H49N80vnvwVXQAAUwoO+M7Uz8vl5ZzzaGuueNq1szxuqEjK9dv5+VKLjj7oH0MXJA73htWbZmIYOQWYZCnoP4KquSpyHkICgYA29aox9FE8i3mY4PEYndpJR3zzPl4VUtxDnuaFU5260nQ4YLyBGT8aou7lTIcHLA4+FVTgXCFPI2x9O6tGzJMdhsoG5NLBdsiuZGbC4/ego7pgOzAyDzPnVxAcDYHBznpmmTj7dmC70Jz3PaEEsF/Ec1Y0imLCSE7Ac80ZwW2MF7DdiZl7JtXcIBJ5bHBwTV83CITcySo/ZxMxymSSSG2PxBA+tDVwnowpbpCKSRl1kyHB6jcgdfSqmyq5J153VQee/n+daMWVlDIytGQ5TAxzIPX5fnV0HCrae5WVnyi7FRtgYxgfH8679MSd2NoyftEw20R7f7c/rXVuYuHxxxoiJbBVUAao1zjzrqH9uP4b4GJJuGZuDA3ZhY+45JJ1EDp8c1ct1DYoiQRAIgO55gHnk/wA6VG+do2y2e9gL3emnn9KUz9rc2Urwkai8bY/7iRn06Ucp2tzz26b0NHDNGLXt3wRqAQA7af0wc1GPiDzX4iDDKnZgeRJwB8Nhk0htrrVDaL2hCNFrbTvk6jt8hVthdzLB2mmRfaJyqx6cZIByPTJJ+FLfT8thzyaC14uY4mklbTISNsAjJO31FOLDiOWjWcMhIHdcYJ8MDpWL9uk4dbtI7aomTRrGxZuZ0npzPzq61v0vViMIjlb3gz/6meq5HUYBHryqfL0atalEZGjXv7K8rdsVQNkAFtJIz0HUelGKbYMcgdq6kgAchgHPjj96zc06XBgmuCmGjOQH2BHiR8d+XKjIZmJijuXbvM0YJHMjcD5fpt1qKun2KJrXkL4lfRQRxvEuvA2XSwIwcfT96QtPcXVzIkZRBkks3Pcah1wetOpUhmDyo2FYjtBnkvez5+WKy1zKFvH1lu0dtTBRyGOWao6eE00uReTIka6wRl0rJPKQRq09STy3+B86vW7ADOp0qDhQMknnzzyrJ8Plu3mAuzqAwCuM5HMbdOnwIrUx3dnGwjJCyMcuG/Fnl/PCp8+Jw/psXqK+J28pu+0XMgcEvqJYp5AHly5Dnmg4xdAGSQ7ncIHJAGev05Z505vEEcheG5bW++GGQcgDI3+nnSxuKRxxujyKZF5lVzt0P0qjHVVOmgNtJg98JpYy1xISoI1DJGTyzz8sb+tJlRVuQGJ7PBYg+Bz+9GSyyXpSBFBbYnA0qoyBsPl8zS7MqkOqEa+gXO2R067/AEq3HL00EU2yckJLTTAaiThF/EevoNvqKDuYZy668789+X82+dGyq0MJSMnSu2x72/U+AztVrRSLHGkjqGIDSDqOuP0pqegPc0JWS5yigkkx6tj9K9NqqsS+SXOdqNZJE0LG2WLHHlvQ000scxXGpk54Hn40xU29jVTJw2a5VpHGM4Ao+CGIp3thryMch/CaCtZ/aCclV7IZOaKmjlSztbgnCOzNqHhtg+fX5UNt67mvVl5n0wzrDlSUJAxzII/zRdvKZYle6PcXkTtkjmPTx9KUQAP9oGdBzGcAEg8sHfH7VU18exkjQt95iunPrjP85UFYtVsbNdprFFquZZXZhzK53xpwd/Dn/MVdHLajSjIkYbfRyAAPKsr2kkhGGdgpRSFOzatP71AyyNKoimEpj06stjO+4X16Uh9K3yx6zI1j8Qvo3ZFgl0qcDTpxjy3rqVG2vGOYbkiM7oCp2HSvaDwQb5RV27XixvLkosQXBPU4/QfSqeHXEkl0YZkY7BEVOYxg7DoMgAjwqNuyxQxPpKwuVdBncEA7Z+VQguESH7JpEjAbC4yrHO+TzOx5eOa9HT+LSIJ5eoULGeys5ViCMsalQVbdQWJwc+GT86AtphbdiZJYzJ3hllOMHOMnn/OfiyjeR5ZbBI8BoguhHyfEZPjzOfXNKZyTw6NjEnaJdGPUV/2jGT8/LrvXRrWzNSaJcTn+wtoRyCbKvvEdPMY8Mb15ZTDhzyCV2lkDMCUwQARg8/h4dKqivnVFW4VXB5KECkbA5GkDBHjU0je5nZIVeKHbcKCxG+5PpTWttGHqaiG7j/ty31ugWUnDHTs527w6jY7UwkkaQLcYBBQDKsMhsjY465XAPKspazpaj2dGJQEMGYnGMchvU4uKFJxHs6yHSyqTjSeagDwwDnx9TmGsHc3oMWQ2U0MMkTdm5WGQdoxX/wDPfYH5/T557ii263rqrCRXIZGPhucY+XXfbxoWXiVzKhja6WMgFezzzKjcHz678viaWLxJp4EjnjzPBusnJsZxg+gPrtvQ4emqdwLtNG2v4oYrVHGsSOuMoQSWOcnO3IBeo2HMUqh4jaxg26XDmMZ7QNHlSf8Au/wRS9OK6oT24jkDKERGztk+W5+dLNJuoppsOZBgowJwBjfONvyosXT7fyYKvXdGjF6hzbk24hYgE75Orbuj49cUqvrge0l4idJchV2GByz/AD/lbC0scaYyISdLE7ENk4Pzr3XsRnfqTz8qesKlgXTZouD30MCzlmILKqqDuAMYJ+tVveW6JIUVMDIQle986z6F+1Cr94gKPPwqUbuuUflqIODnB6/rWeHdsBVQ69sVUMyImQMkY5HG1ALIzMHkJI1ZbJ+vhQjE94AlV64H0qwyu7xpGpQYGDn86JY0g9RmjJCBpbUTncfDw+dcYVlj1MoUSDAA6HxJ/nKl0bFlk0yZ0rqBJHnnlv511teymQL91iQBgbEUPjfKC1Y1CQ6CJI8FMHKj3hyOfmDj1qN5dRsnYqThAMb5zSy6uWUyRvIqkZXbOKpjuJLeM61TEg2c6T8VPPby8a5Ym92aqYzkbCop0jbvMxPyqWiPsGJ1F0wV8V3G/M0tZkLaJNRA7uQ3vH1pjDxGWKFIUTRCAQIwTjbB3JzXVLS2Dl/ToJvtCsepAVKhl6KBuPzoNIxlDJq0Z090DKkZ+Yqy1czPJJqABVgzfHp9KqSUyFYlDB2yfHHPArktAguNrkIo7aI4A37YjPw6V1A6W6lieu1e13ajgaPu5x92IkeoIo7haq2FdQVQiQA8tRIFdXU6+CZnvDpZDxecFydcbEnzbGfzNRvj/wDVKOmtTj0LqPpj5V1dWe1/4MjgU2y61YljkZ5UfBM/Y7HTggd3bPOurqKzQIzO2osclgTnHhyqlSe2zqIKgkYPqa8rqMWNpHZgzk5Jb4e6KD5IZPvHqfWvK6gj2Dqw6FyTpONP4cbUys1SS9Nu0a9n2QOBtuFrq6k3wHHIEwBR0+7p1Y88/wCaClGTbN1aTDHxGa6uosYJY3dmkQDIR1xnfnnNXMiy287uoyEd9ttwT+1dXUx+jJ5AnYqcAnmtExOdZQYAbY454zXV1dRj5IFiAzL3Ssm2NuVeqxL6c4w4AI8K6uofQyeQficYW+lUE7EYPqAf1q7hiLPNDbuo7NjqO2+fWurqN/0Gf7mhGX/UaL7ivgD0z+1EPI7WkzE7omV8thXV1BXoD2yUTt7PbQqdMbsXYDqe7RtvZwyXMS6dPZqMEczv1zXtdScj0WxRG4OGIGK6urqXqwT/2Q==" alt="">
+   <h1> fadeUp (frist hide the div , photo etc the click ) , fadeDown ,  fadeToggle , fadeTo</h1>
+     
+   <div id="div" style="background:black;height:100px; width: 100px;position:absolute;">  </div> 
+   <button id="blackdiv">black div</button>
+</body>
+</html>
