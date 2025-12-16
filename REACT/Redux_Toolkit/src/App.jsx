@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import {Counter} from './counter.jsx'
+import Counter from './counter'
 
 
 function App() {
